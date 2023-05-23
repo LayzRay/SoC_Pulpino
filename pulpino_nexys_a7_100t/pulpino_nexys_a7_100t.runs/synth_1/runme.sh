@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/student_28/Files/Lab_4/pulpino_students/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.runs/synth_1'
+HD_PWD='/home/student_28/Files/Pulpino/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

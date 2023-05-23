@@ -81,9 +81,9 @@ Disassembly of section .text:
 
 000000d8 <_start>:
   d8:	00100d17          	auipc	s10,0x100
-  dc:	f34d0d13          	add	s10,s10,-204 # 10000c <_bss_end>
+  dc:	f34d0d13          	add	s10,s10,-204 # 10000c <cipher>
   e0:	00100d97          	auipc	s11,0x100
-  e4:	f2cd8d93          	add	s11,s11,-212 # 10000c <_bss_end>
+  e4:	f30d8d93          	add	s11,s11,-208 # 100010 <_bss_end>
   e8:	01bd5763          	bge	s10,s11,f6 <zero_loop_end>
 
 000000ec <zero_loop>:
@@ -92,19 +92,19 @@ Disassembly of section .text:
   f2:	ffaddde3          	bge	s11,s10,ec <zero_loop>
 
 000000f6 <zero_loop_end>:
-  f6:	03b000ef          	jal	930 <__libc_init_array>
+  f6:	13f000ef          	jal	a34 <__DTOR_END__>
 
 000000fa <main_entry>:
   fa:	4501                	li	a0,0
   fc:	4585                	li	a1,1
-  fe:	4e8000ef          	jal	5e6 <uart_set_cfg>
+  fe:	54e000ef          	jal	64c <uart_set_cfg>
  102:	4501                	li	a0,0
  104:	4581                	li	a1,0
  106:	186000ef          	jal	28c <main>
  10a:	842a                	mv	s0,a0
- 10c:	632000ef          	jal	73e <uart_wait_tx_done>
+ 10c:	698000ef          	jal	7a4 <uart_wait_tx_done>
  110:	8522                	mv	a0,s0
- 112:	64c000ef          	jal	75e <exit>
+ 112:	6b2000ef          	jal	7c4 <exit>
 
 00000116 <ISR_I2C_ASM>:
  116:	711d                	add	sp,sp,-96
@@ -112,7 +112,7 @@ Disassembly of section .text:
  11a:	0d8000ef          	jal	1f2 <store_regs>
  11e:	00000097          	auipc	ra,0x0
  122:	11e08093          	add	ra,ra,286 # 23c <end_except>
- 126:	6d60006f          	j	7fc <ISR_I2C>
+ 126:	73c0006f          	j	862 <ISR_I2C>
 
 0000012a <ISR_UART_ASM>:
  12a:	711d                	add	sp,sp,-96
@@ -120,7 +120,7 @@ Disassembly of section .text:
  12e:	0c4000ef          	jal	1f2 <store_regs>
  132:	00000097          	auipc	ra,0x0
  136:	10a08093          	add	ra,ra,266 # 23c <end_except>
- 13a:	6ca0006f          	j	804 <ISR_UART>
+ 13a:	7300006f          	j	86a <ISR_UART>
 
 0000013e <ISR_GPIO_ASM>:
  13e:	711d                	add	sp,sp,-96
@@ -128,7 +128,7 @@ Disassembly of section .text:
  142:	0b0000ef          	jal	1f2 <store_regs>
  146:	00000097          	auipc	ra,0x0
  14a:	0f608093          	add	ra,ra,246 # 23c <end_except>
- 14e:	6be0006f          	j	80c <ISR_GPIO>
+ 14e:	7240006f          	j	872 <ISR_GPIO>
 
 00000152 <ISR_SPIM0_ASM>:
  152:	711d                	add	sp,sp,-96
@@ -136,7 +136,7 @@ Disassembly of section .text:
  156:	09c000ef          	jal	1f2 <store_regs>
  15a:	00000097          	auipc	ra,0x0
  15e:	0e208093          	add	ra,ra,226 # 23c <end_except>
- 162:	6b20006f          	j	814 <ISR_SPIM0>
+ 162:	7180006f          	j	87a <ISR_SPIM0>
 
 00000166 <ISR_SPIM1_ASM>:
  166:	711d                	add	sp,sp,-96
@@ -144,7 +144,7 @@ Disassembly of section .text:
  16a:	088000ef          	jal	1f2 <store_regs>
  16e:	00000097          	auipc	ra,0x0
  172:	0ce08093          	add	ra,ra,206 # 23c <end_except>
- 176:	6a60006f          	j	81c <ISR_SPIM1>
+ 176:	70c0006f          	j	882 <ISR_SPIM1>
 
 0000017a <ISR_TA_CMP_ASM>:
  17a:	711d                	add	sp,sp,-96
@@ -152,7 +152,7 @@ Disassembly of section .text:
  17e:	074000ef          	jal	1f2 <store_regs>
  182:	00000097          	auipc	ra,0x0
  186:	0ba08093          	add	ra,ra,186 # 23c <end_except>
- 18a:	6a20006f          	j	82c <ISR_TA_CMP>
+ 18a:	7080006f          	j	892 <ISR_TA_CMP>
 
 0000018e <ISR_TA_OVF_ASM>:
  18e:	711d                	add	sp,sp,-96
@@ -160,7 +160,7 @@ Disassembly of section .text:
  192:	060000ef          	jal	1f2 <store_regs>
  196:	00000097          	auipc	ra,0x0
  19a:	0a608093          	add	ra,ra,166 # 23c <end_except>
- 19e:	6860006f          	j	824 <ISR_TA_OVF>
+ 19e:	6ec0006f          	j	88a <ISR_TA_OVF>
 
 000001a2 <ISR_TB_CMP_ASM>:
  1a2:	711d                	add	sp,sp,-96
@@ -168,7 +168,7 @@ Disassembly of section .text:
  1a6:	04c000ef          	jal	1f2 <store_regs>
  1aa:	00000097          	auipc	ra,0x0
  1ae:	09208093          	add	ra,ra,146 # 23c <end_except>
- 1b2:	68a0006f          	j	83c <ISR_TB_CMP>
+ 1b2:	6f00006f          	j	8a2 <ISR_TB_CMP>
 
 000001b6 <ISR_TB_OVF_ASM>:
  1b6:	711d                	add	sp,sp,-96
@@ -176,7 +176,7 @@ Disassembly of section .text:
  1ba:	038000ef          	jal	1f2 <store_regs>
  1be:	00000097          	auipc	ra,0x0
  1c2:	07e08093          	add	ra,ra,126 # 23c <end_except>
- 1c6:	66e0006f          	j	834 <ISR_TB_OVF>
+ 1c6:	6d40006f          	j	89a <ISR_TB_OVF>
 
 000001ca <illegal_insn_handler>:
  1ca:	711d                	add	sp,sp,-96
@@ -184,7 +184,7 @@ Disassembly of section .text:
  1ce:	024000ef          	jal	1f2 <store_regs>
  1d2:	00000097          	auipc	ra,0x0
  1d6:	06a08093          	add	ra,ra,106 # 23c <end_except>
- 1da:	7340006f          	j	90e <illegal_insn_handler_c>
+ 1da:	03b0006f          	j	a14 <illegal_insn_handler_c>
 
 000001de <ecall_insn_handler>:
  1de:	711d                	add	sp,sp,-96
@@ -192,7 +192,7 @@ Disassembly of section .text:
  1e2:	010000ef          	jal	1f2 <store_regs>
  1e6:	00000097          	auipc	ra,0x0
  1ea:	05608093          	add	ra,ra,86 # 23c <end_except>
- 1ee:	7280006f          	j	916 <ecall_insn_handler_c>
+ 1ee:	02f0006f          	j	a1c <ecall_insn_handler_c>
 
 000001f2 <store_regs>:
  1f2:	c00e                	sw	gp,0(sp)
@@ -264,751 +264,841 @@ Disassembly of section .text:
  28a:	8082                	ret
 
 0000028c <main>:
- 28c:	7139                	add	sp,sp,-64
- 28e:	de06                	sw	ra,60(sp)
- 290:	dc22                	sw	s0,56(sp)
- 292:	0080                	add	s0,sp,64
+ 28c:	711d                	add	sp,sp,-96
+ 28e:	ce86                	sw	ra,92(sp)
+ 290:	cca2                	sw	s0,88(sp)
+ 292:	1080                	add	s0,sp,96
  294:	14500593          	li	a1,325
  298:	4501                	li	a0,0
- 29a:	26b1                	jal	5e6 <uart_set_cfg>
+ 29a:	2e4d                	jal	64c <uart_set_cfg>
  29c:	fe042623          	sw	zero,-20(s0)
  2a0:	a839                	j	2be <main+0x32>
- 2a2:	2189                	jal	6e4 <uart_getchar>
+ 2a2:	2165                	jal	74a <uart_getchar>
  2a4:	87aa                	mv	a5,a0
  2a6:	873e                	mv	a4,a5
  2a8:	fec42783          	lw	a5,-20(s0)
  2ac:	17c1                	add	a5,a5,-16
  2ae:	97a2                	add	a5,a5,s0
- 2b0:	fee78623          	sb	a4,-20(a5)
+ 2b0:	fee78423          	sb	a4,-24(a5)
  2b4:	fec42783          	lw	a5,-20(s0)
  2b8:	0785                	add	a5,a5,1
  2ba:	fef42623          	sw	a5,-20(s0)
  2be:	fec42703          	lw	a4,-20(s0)
  2c2:	47bd                	li	a5,15
  2c4:	fce7dfe3          	bge	a5,a4,2a2 <main+0x16>
- 2c8:	fdc40793          	add	a5,s0,-36
- 2cc:	853e                	mv	a0,a5
- 2ce:	2b9d                	jal	844 <cipher_write_data>
- 2d0:	23e1                	jal	898 <cipher_set_req>
- 2d2:	2d29                	jal	8ec <cipher_read_busy>
- 2d4:	87aa                	mv	a5,a0
- 2d6:	eb81                	bnez	a5,2e6 <main+0x5a>
- 2d8:	45a9                	li	a1,10
- 2da:	001007b7          	lui	a5,0x100
- 2de:	00078513          	mv	a0,a5
- 2e2:	2e41                	jal	672 <uart_send>
- 2e4:	29a9                	jal	73e <uart_wait_tx_done>
- 2e6:	0001                	nop
- 2e8:	23ed                	jal	8d2 <cipher_read_valid>
- 2ea:	87aa                	mv	a5,a0
- 2ec:	873e                	mv	a4,a5
- 2ee:	4785                	li	a5,1
- 2f0:	fef71ce3          	bne	a4,a5,2e8 <main+0x5c>
- 2f4:	fcc40793          	add	a5,s0,-52
- 2f8:	853e                	mv	a0,a5
- 2fa:	23a5                	jal	862 <cipher_read_data>
- 2fc:	fcc40793          	add	a5,s0,-52
- 300:	45c1                	li	a1,16
- 302:	853e                	mv	a0,a5
- 304:	26bd                	jal	672 <uart_send>
- 306:	2925                	jal	73e <uart_wait_tx_done>
- 308:	a001                	j	308 <main+0x7c>
+ 2c8:	fe0405a3          	sb	zero,-21(s0)
+ 2cc:	a0a5                	j	334 <main+0xa8>
+ 2ce:	feb44783          	lbu	a5,-21(s0)
+ 2d2:	078a                	sll	a5,a5,0x2
+ 2d4:	17c1                	add	a5,a5,-16
+ 2d6:	97a2                	add	a5,a5,s0
+ 2d8:	fe87c783          	lbu	a5,-24(a5)
+ 2dc:	01879713          	sll	a4,a5,0x18
+ 2e0:	feb44783          	lbu	a5,-21(s0)
+ 2e4:	078a                	sll	a5,a5,0x2
+ 2e6:	0785                	add	a5,a5,1
+ 2e8:	17c1                	add	a5,a5,-16
+ 2ea:	97a2                	add	a5,a5,s0
+ 2ec:	fe87c783          	lbu	a5,-24(a5)
+ 2f0:	07c2                	sll	a5,a5,0x10
+ 2f2:	8f5d                	or	a4,a4,a5
+ 2f4:	feb44783          	lbu	a5,-21(s0)
+ 2f8:	078a                	sll	a5,a5,0x2
+ 2fa:	0789                	add	a5,a5,2
+ 2fc:	17c1                	add	a5,a5,-16
+ 2fe:	97a2                	add	a5,a5,s0
+ 300:	fe87c783          	lbu	a5,-24(a5)
+ 304:	07a2                	sll	a5,a5,0x8
+ 306:	8f5d                	or	a4,a4,a5
+ 308:	feb44783          	lbu	a5,-21(s0)
+ 30c:	078a                	sll	a5,a5,0x2
+ 30e:	078d                	add	a5,a5,3
+ 310:	17c1                	add	a5,a5,-16
+ 312:	97a2                	add	a5,a5,s0
+ 314:	fe87c783          	lbu	a5,-24(a5)
+ 318:	86be                	mv	a3,a5
+ 31a:	feb44783          	lbu	a5,-21(s0)
+ 31e:	8f55                	or	a4,a4,a3
+ 320:	078a                	sll	a5,a5,0x2
+ 322:	17c1                	add	a5,a5,-16
+ 324:	97a2                	add	a5,a5,s0
+ 326:	fce7ac23          	sw	a4,-40(a5)
+ 32a:	feb44783          	lbu	a5,-21(s0)
+ 32e:	0785                	add	a5,a5,1
+ 330:	fef405a3          	sb	a5,-21(s0)
+ 334:	feb44703          	lbu	a4,-21(s0)
+ 338:	478d                	li	a5,3
+ 33a:	f8e7fae3          	bgeu	a5,a4,2ce <main+0x42>
+ 33e:	2d29                	jal	958 <cipher_reset>
+ 340:	fc840793          	add	a5,s0,-56
+ 344:	853e                	mv	a0,a5
+ 346:	2bbd                	jal	8c4 <cipher_write_data>
+ 348:	2d1d                	jal	97e <cipher_set_req>
+ 34a:	2d71                	jal	9e6 <cipher_is_busy>
+ 34c:	87aa                	mv	a5,a0
+ 34e:	eb81                	bnez	a5,35e <main+0xd2>
+ 350:	45a9                	li	a1,10
+ 352:	001007b7          	lui	a5,0x100
+ 356:	00078513          	mv	a0,a5
+ 35a:	2ebd                	jal	6d8 <uart_send>
+ 35c:	21a1                	jal	7a4 <uart_wait_tx_done>
+ 35e:	0001                	nop
+ 360:	258d                	jal	9c2 <cipher_is_valid>
+ 362:	87aa                	mv	a5,a0
+ 364:	dff5                	beqz	a5,360 <main+0xd4>
+ 366:	fb840793          	add	a5,s0,-72
+ 36a:	853e                	mv	a0,a5
+ 36c:	235d                	jal	912 <cipher_read_data>
+ 36e:	a001                	j	36e <main+0xe2>
 
-0000030a <set_pin_function>:
- 30a:	7179                	add	sp,sp,-48
- 30c:	d622                	sw	s0,44(sp)
- 30e:	1800                	add	s0,sp,48
- 310:	fca42e23          	sw	a0,-36(s0)
- 314:	fcb42c23          	sw	a1,-40(s0)
- 318:	1a1077b7          	lui	a5,0x1a107
- 31c:	439c                	lw	a5,0(a5)
- 31e:	fef42623          	sw	a5,-20(s0)
- 322:	fdc42783          	lw	a5,-36(s0)
- 326:	4705                	li	a4,1
- 328:	00f717b3          	sll	a5,a4,a5
- 32c:	fff7c713          	not	a4,a5
- 330:	fec42783          	lw	a5,-20(s0)
- 334:	8ff9                	and	a5,a5,a4
- 336:	fef42623          	sw	a5,-20(s0)
- 33a:	fdc42783          	lw	a5,-36(s0)
- 33e:	fd842703          	lw	a4,-40(s0)
- 342:	00f71733          	sll	a4,a4,a5
- 346:	fec42783          	lw	a5,-20(s0)
- 34a:	8fd9                	or	a5,a5,a4
- 34c:	fef42623          	sw	a5,-20(s0)
- 350:	1a1077b7          	lui	a5,0x1a107
- 354:	fec42703          	lw	a4,-20(s0)
- 358:	c398                	sw	a4,0(a5)
- 35a:	0001                	nop
- 35c:	5432                	lw	s0,44(sp)
- 35e:	6145                	add	sp,sp,48
- 360:	8082                	ret
-
-00000362 <get_pin_function>:
- 362:	7179                	add	sp,sp,-48
- 364:	d622                	sw	s0,44(sp)
- 366:	1800                	add	s0,sp,48
- 368:	fca42e23          	sw	a0,-36(s0)
- 36c:	1a1077b7          	lui	a5,0x1a107
- 370:	439c                	lw	a5,0(a5)
- 372:	fef42623          	sw	a5,-20(s0)
- 376:	fec42703          	lw	a4,-20(s0)
- 37a:	fdc42783          	lw	a5,-36(s0)
- 37e:	40f757b3          	sra	a5,a4,a5
- 382:	8b85                	and	a5,a5,1
+00000370 <set_pin_function>:
+ 370:	7179                	add	sp,sp,-48
+ 372:	d622                	sw	s0,44(sp)
+ 374:	1800                	add	s0,sp,48
+ 376:	fca42e23          	sw	a0,-36(s0)
+ 37a:	fcb42c23          	sw	a1,-40(s0)
+ 37e:	1a1077b7          	lui	a5,0x1a107
+ 382:	439c                	lw	a5,0(a5)
  384:	fef42623          	sw	a5,-20(s0)
- 388:	fec42783          	lw	a5,-20(s0)
- 38c:	853e                	mv	a0,a5
- 38e:	5432                	lw	s0,44(sp)
- 390:	6145                	add	sp,sp,48
- 392:	8082                	ret
+ 388:	fdc42783          	lw	a5,-36(s0)
+ 38c:	4705                	li	a4,1
+ 38e:	00f717b3          	sll	a5,a4,a5
+ 392:	fff7c713          	not	a4,a5
+ 396:	fec42783          	lw	a5,-20(s0)
+ 39a:	8ff9                	and	a5,a5,a4
+ 39c:	fef42623          	sw	a5,-20(s0)
+ 3a0:	fdc42783          	lw	a5,-36(s0)
+ 3a4:	fd842703          	lw	a4,-40(s0)
+ 3a8:	00f71733          	sll	a4,a4,a5
+ 3ac:	fec42783          	lw	a5,-20(s0)
+ 3b0:	8fd9                	or	a5,a5,a4
+ 3b2:	fef42623          	sw	a5,-20(s0)
+ 3b6:	1a1077b7          	lui	a5,0x1a107
+ 3ba:	fec42703          	lw	a4,-20(s0)
+ 3be:	c398                	sw	a4,0(a5)
+ 3c0:	0001                	nop
+ 3c2:	5432                	lw	s0,44(sp)
+ 3c4:	6145                	add	sp,sp,48
+ 3c6:	8082                	ret
 
-00000394 <set_gpio_pin_direction>:
- 394:	7179                	add	sp,sp,-48
- 396:	d622                	sw	s0,44(sp)
- 398:	1800                	add	s0,sp,48
- 39a:	fca42e23          	sw	a0,-36(s0)
- 39e:	fcb42c23          	sw	a1,-40(s0)
- 3a2:	1a1017b7          	lui	a5,0x1a101
- 3a6:	439c                	lw	a5,0(a5)
- 3a8:	fef42623          	sw	a5,-20(s0)
- 3ac:	fd842783          	lw	a5,-40(s0)
- 3b0:	ef91                	bnez	a5,3cc <set_gpio_pin_direction+0x38>
- 3b2:	fdc42783          	lw	a5,-36(s0)
- 3b6:	4705                	li	a4,1
- 3b8:	00f717b3          	sll	a5,a4,a5
- 3bc:	fff7c713          	not	a4,a5
- 3c0:	fec42783          	lw	a5,-20(s0)
- 3c4:	8ff9                	and	a5,a5,a4
- 3c6:	fef42623          	sw	a5,-20(s0)
- 3ca:	a819                	j	3e0 <set_gpio_pin_direction+0x4c>
- 3cc:	fdc42783          	lw	a5,-36(s0)
- 3d0:	4705                	li	a4,1
- 3d2:	00f71733          	sll	a4,a4,a5
- 3d6:	fec42783          	lw	a5,-20(s0)
- 3da:	8fd9                	or	a5,a5,a4
- 3dc:	fef42623          	sw	a5,-20(s0)
- 3e0:	1a1017b7          	lui	a5,0x1a101
- 3e4:	fec42703          	lw	a4,-20(s0)
- 3e8:	c398                	sw	a4,0(a5)
- 3ea:	0001                	nop
- 3ec:	5432                	lw	s0,44(sp)
- 3ee:	6145                	add	sp,sp,48
- 3f0:	8082                	ret
+000003c8 <get_pin_function>:
+ 3c8:	7179                	add	sp,sp,-48
+ 3ca:	d622                	sw	s0,44(sp)
+ 3cc:	1800                	add	s0,sp,48
+ 3ce:	fca42e23          	sw	a0,-36(s0)
+ 3d2:	1a1077b7          	lui	a5,0x1a107
+ 3d6:	439c                	lw	a5,0(a5)
+ 3d8:	fef42623          	sw	a5,-20(s0)
+ 3dc:	fec42703          	lw	a4,-20(s0)
+ 3e0:	fdc42783          	lw	a5,-36(s0)
+ 3e4:	40f757b3          	sra	a5,a4,a5
+ 3e8:	8b85                	and	a5,a5,1
+ 3ea:	fef42623          	sw	a5,-20(s0)
+ 3ee:	fec42783          	lw	a5,-20(s0)
+ 3f2:	853e                	mv	a0,a5
+ 3f4:	5432                	lw	s0,44(sp)
+ 3f6:	6145                	add	sp,sp,48
+ 3f8:	8082                	ret
 
-000003f2 <get_gpio_pin_direction>:
- 3f2:	7179                	add	sp,sp,-48
- 3f4:	d622                	sw	s0,44(sp)
- 3f6:	1800                	add	s0,sp,48
- 3f8:	fca42e23          	sw	a0,-36(s0)
- 3fc:	1a1017b7          	lui	a5,0x1a101
- 400:	439c                	lw	a5,0(a5)
- 402:	fef42623          	sw	a5,-20(s0)
- 406:	fec42703          	lw	a4,-20(s0)
- 40a:	fdc42783          	lw	a5,-36(s0)
- 40e:	0786                	sll	a5,a5,0x1
- 410:	40f757b3          	sra	a5,a4,a5
- 414:	8b85                	and	a5,a5,1
- 416:	fef42623          	sw	a5,-20(s0)
- 41a:	fec42783          	lw	a5,-20(s0)
- 41e:	853e                	mv	a0,a5
- 420:	5432                	lw	s0,44(sp)
- 422:	6145                	add	sp,sp,48
- 424:	8082                	ret
+000003fa <set_gpio_pin_direction>:
+ 3fa:	7179                	add	sp,sp,-48
+ 3fc:	d622                	sw	s0,44(sp)
+ 3fe:	1800                	add	s0,sp,48
+ 400:	fca42e23          	sw	a0,-36(s0)
+ 404:	fcb42c23          	sw	a1,-40(s0)
+ 408:	1a1017b7          	lui	a5,0x1a101
+ 40c:	439c                	lw	a5,0(a5)
+ 40e:	fef42623          	sw	a5,-20(s0)
+ 412:	fd842783          	lw	a5,-40(s0)
+ 416:	ef91                	bnez	a5,432 <set_gpio_pin_direction+0x38>
+ 418:	fdc42783          	lw	a5,-36(s0)
+ 41c:	4705                	li	a4,1
+ 41e:	00f717b3          	sll	a5,a4,a5
+ 422:	fff7c713          	not	a4,a5
+ 426:	fec42783          	lw	a5,-20(s0)
+ 42a:	8ff9                	and	a5,a5,a4
+ 42c:	fef42623          	sw	a5,-20(s0)
+ 430:	a819                	j	446 <set_gpio_pin_direction+0x4c>
+ 432:	fdc42783          	lw	a5,-36(s0)
+ 436:	4705                	li	a4,1
+ 438:	00f71733          	sll	a4,a4,a5
+ 43c:	fec42783          	lw	a5,-20(s0)
+ 440:	8fd9                	or	a5,a5,a4
+ 442:	fef42623          	sw	a5,-20(s0)
+ 446:	1a1017b7          	lui	a5,0x1a101
+ 44a:	fec42703          	lw	a4,-20(s0)
+ 44e:	c398                	sw	a4,0(a5)
+ 450:	0001                	nop
+ 452:	5432                	lw	s0,44(sp)
+ 454:	6145                	add	sp,sp,48
+ 456:	8082                	ret
 
-00000426 <set_gpio_pin_value>:
- 426:	7179                	add	sp,sp,-48
- 428:	d622                	sw	s0,44(sp)
- 42a:	1800                	add	s0,sp,48
- 42c:	fca42e23          	sw	a0,-36(s0)
- 430:	fcb42c23          	sw	a1,-40(s0)
- 434:	1a1017b7          	lui	a5,0x1a101
- 438:	07a1                	add	a5,a5,8 # 1a101008 <_stack_start+0x19ff9008>
- 43a:	439c                	lw	a5,0(a5)
- 43c:	fef42623          	sw	a5,-20(s0)
- 440:	fd842783          	lw	a5,-40(s0)
- 444:	ef91                	bnez	a5,460 <set_gpio_pin_value+0x3a>
- 446:	fdc42783          	lw	a5,-36(s0)
- 44a:	4705                	li	a4,1
- 44c:	00f717b3          	sll	a5,a4,a5
- 450:	fff7c713          	not	a4,a5
- 454:	fec42783          	lw	a5,-20(s0)
- 458:	8ff9                	and	a5,a5,a4
- 45a:	fef42623          	sw	a5,-20(s0)
- 45e:	a819                	j	474 <set_gpio_pin_value+0x4e>
- 460:	fdc42783          	lw	a5,-36(s0)
- 464:	4705                	li	a4,1
- 466:	00f71733          	sll	a4,a4,a5
- 46a:	fec42783          	lw	a5,-20(s0)
- 46e:	8fd9                	or	a5,a5,a4
- 470:	fef42623          	sw	a5,-20(s0)
- 474:	1a1017b7          	lui	a5,0x1a101
- 478:	07a1                	add	a5,a5,8 # 1a101008 <_stack_start+0x19ff9008>
- 47a:	fec42703          	lw	a4,-20(s0)
- 47e:	c398                	sw	a4,0(a5)
- 480:	0001                	nop
- 482:	5432                	lw	s0,44(sp)
- 484:	6145                	add	sp,sp,48
- 486:	8082                	ret
+00000458 <get_gpio_pin_direction>:
+ 458:	7179                	add	sp,sp,-48
+ 45a:	d622                	sw	s0,44(sp)
+ 45c:	1800                	add	s0,sp,48
+ 45e:	fca42e23          	sw	a0,-36(s0)
+ 462:	1a1017b7          	lui	a5,0x1a101
+ 466:	439c                	lw	a5,0(a5)
+ 468:	fef42623          	sw	a5,-20(s0)
+ 46c:	fec42703          	lw	a4,-20(s0)
+ 470:	fdc42783          	lw	a5,-36(s0)
+ 474:	0786                	sll	a5,a5,0x1
+ 476:	40f757b3          	sra	a5,a4,a5
+ 47a:	8b85                	and	a5,a5,1
+ 47c:	fef42623          	sw	a5,-20(s0)
+ 480:	fec42783          	lw	a5,-20(s0)
+ 484:	853e                	mv	a0,a5
+ 486:	5432                	lw	s0,44(sp)
+ 488:	6145                	add	sp,sp,48
+ 48a:	8082                	ret
 
-00000488 <get_gpio_pin_value>:
- 488:	7179                	add	sp,sp,-48
- 48a:	d622                	sw	s0,44(sp)
- 48c:	1800                	add	s0,sp,48
- 48e:	fca42e23          	sw	a0,-36(s0)
- 492:	1a1017b7          	lui	a5,0x1a101
- 496:	0791                	add	a5,a5,4 # 1a101004 <_stack_start+0x19ff9004>
- 498:	439c                	lw	a5,0(a5)
- 49a:	fef42623          	sw	a5,-20(s0)
- 49e:	fec42703          	lw	a4,-20(s0)
- 4a2:	fdc42783          	lw	a5,-36(s0)
- 4a6:	40f757b3          	sra	a5,a4,a5
- 4aa:	8b85                	and	a5,a5,1
- 4ac:	fef42623          	sw	a5,-20(s0)
- 4b0:	fec42783          	lw	a5,-20(s0)
- 4b4:	853e                	mv	a0,a5
- 4b6:	5432                	lw	s0,44(sp)
- 4b8:	6145                	add	sp,sp,48
- 4ba:	8082                	ret
+0000048c <set_gpio_pin_value>:
+ 48c:	7179                	add	sp,sp,-48
+ 48e:	d622                	sw	s0,44(sp)
+ 490:	1800                	add	s0,sp,48
+ 492:	fca42e23          	sw	a0,-36(s0)
+ 496:	fcb42c23          	sw	a1,-40(s0)
+ 49a:	1a1017b7          	lui	a5,0x1a101
+ 49e:	07a1                	add	a5,a5,8 # 1a101008 <_stack_start+0x19ff9008>
+ 4a0:	439c                	lw	a5,0(a5)
+ 4a2:	fef42623          	sw	a5,-20(s0)
+ 4a6:	fd842783          	lw	a5,-40(s0)
+ 4aa:	ef91                	bnez	a5,4c6 <set_gpio_pin_value+0x3a>
+ 4ac:	fdc42783          	lw	a5,-36(s0)
+ 4b0:	4705                	li	a4,1
+ 4b2:	00f717b3          	sll	a5,a4,a5
+ 4b6:	fff7c713          	not	a4,a5
+ 4ba:	fec42783          	lw	a5,-20(s0)
+ 4be:	8ff9                	and	a5,a5,a4
+ 4c0:	fef42623          	sw	a5,-20(s0)
+ 4c4:	a819                	j	4da <set_gpio_pin_value+0x4e>
+ 4c6:	fdc42783          	lw	a5,-36(s0)
+ 4ca:	4705                	li	a4,1
+ 4cc:	00f71733          	sll	a4,a4,a5
+ 4d0:	fec42783          	lw	a5,-20(s0)
+ 4d4:	8fd9                	or	a5,a5,a4
+ 4d6:	fef42623          	sw	a5,-20(s0)
+ 4da:	1a1017b7          	lui	a5,0x1a101
+ 4de:	07a1                	add	a5,a5,8 # 1a101008 <_stack_start+0x19ff9008>
+ 4e0:	fec42703          	lw	a4,-20(s0)
+ 4e4:	c398                	sw	a4,0(a5)
+ 4e6:	0001                	nop
+ 4e8:	5432                	lw	s0,44(sp)
+ 4ea:	6145                	add	sp,sp,48
+ 4ec:	8082                	ret
 
-000004bc <set_gpio_pin_irq_en>:
- 4bc:	7179                	add	sp,sp,-48
- 4be:	d622                	sw	s0,44(sp)
- 4c0:	1800                	add	s0,sp,48
- 4c2:	fca42e23          	sw	a0,-36(s0)
- 4c6:	fcb42c23          	sw	a1,-40(s0)
- 4ca:	1a1017b7          	lui	a5,0x1a101
- 4ce:	07b1                	add	a5,a5,12 # 1a10100c <_stack_start+0x19ff900c>
- 4d0:	439c                	lw	a5,0(a5)
- 4d2:	fef42623          	sw	a5,-20(s0)
- 4d6:	fd842783          	lw	a5,-40(s0)
- 4da:	ef91                	bnez	a5,4f6 <set_gpio_pin_irq_en+0x3a>
- 4dc:	fdc42783          	lw	a5,-36(s0)
- 4e0:	4705                	li	a4,1
- 4e2:	00f717b3          	sll	a5,a4,a5
- 4e6:	fff7c793          	not	a5,a5
- 4ea:	fec42703          	lw	a4,-20(s0)
- 4ee:	8ff9                	and	a5,a5,a4
- 4f0:	fef42623          	sw	a5,-20(s0)
- 4f4:	a819                	j	50a <set_gpio_pin_irq_en+0x4e>
- 4f6:	fdc42783          	lw	a5,-36(s0)
- 4fa:	4705                	li	a4,1
- 4fc:	00f717b3          	sll	a5,a4,a5
- 500:	fec42703          	lw	a4,-20(s0)
- 504:	8fd9                	or	a5,a5,a4
- 506:	fef42623          	sw	a5,-20(s0)
- 50a:	1a1017b7          	lui	a5,0x1a101
- 50e:	07b1                	add	a5,a5,12 # 1a10100c <_stack_start+0x19ff900c>
- 510:	fec42703          	lw	a4,-20(s0)
- 514:	c398                	sw	a4,0(a5)
- 516:	0001                	nop
- 518:	5432                	lw	s0,44(sp)
- 51a:	6145                	add	sp,sp,48
- 51c:	8082                	ret
+000004ee <get_gpio_pin_value>:
+ 4ee:	7179                	add	sp,sp,-48
+ 4f0:	d622                	sw	s0,44(sp)
+ 4f2:	1800                	add	s0,sp,48
+ 4f4:	fca42e23          	sw	a0,-36(s0)
+ 4f8:	1a1017b7          	lui	a5,0x1a101
+ 4fc:	0791                	add	a5,a5,4 # 1a101004 <_stack_start+0x19ff9004>
+ 4fe:	439c                	lw	a5,0(a5)
+ 500:	fef42623          	sw	a5,-20(s0)
+ 504:	fec42703          	lw	a4,-20(s0)
+ 508:	fdc42783          	lw	a5,-36(s0)
+ 50c:	40f757b3          	sra	a5,a4,a5
+ 510:	8b85                	and	a5,a5,1
+ 512:	fef42623          	sw	a5,-20(s0)
+ 516:	fec42783          	lw	a5,-20(s0)
+ 51a:	853e                	mv	a0,a5
+ 51c:	5432                	lw	s0,44(sp)
+ 51e:	6145                	add	sp,sp,48
+ 520:	8082                	ret
 
-0000051e <set_gpio_pin_irq_type>:
- 51e:	7179                	add	sp,sp,-48
- 520:	d622                	sw	s0,44(sp)
- 522:	1800                	add	s0,sp,48
- 524:	fca42e23          	sw	a0,-36(s0)
- 528:	fcb42c23          	sw	a1,-40(s0)
- 52c:	1a1017b7          	lui	a5,0x1a101
- 530:	07c1                	add	a5,a5,16 # 1a101010 <_stack_start+0x19ff9010>
- 532:	439c                	lw	a5,0(a5)
- 534:	fef42623          	sw	a5,-20(s0)
- 538:	1a1017b7          	lui	a5,0x1a101
- 53c:	07d1                	add	a5,a5,20 # 1a101014 <_stack_start+0x19ff9014>
- 53e:	439c                	lw	a5,0(a5)
- 540:	fef42423          	sw	a5,-24(s0)
- 544:	fd842783          	lw	a5,-40(s0)
- 548:	8b85                	and	a5,a5,1
- 54a:	ef91                	bnez	a5,566 <set_gpio_pin_irq_type+0x48>
- 54c:	fdc42783          	lw	a5,-36(s0)
- 550:	4705                	li	a4,1
- 552:	00f717b3          	sll	a5,a4,a5
- 556:	fff7c793          	not	a5,a5
- 55a:	fec42703          	lw	a4,-20(s0)
- 55e:	8ff9                	and	a5,a5,a4
- 560:	fef42623          	sw	a5,-20(s0)
- 564:	a819                	j	57a <set_gpio_pin_irq_type+0x5c>
- 566:	fdc42783          	lw	a5,-36(s0)
- 56a:	4705                	li	a4,1
- 56c:	00f717b3          	sll	a5,a4,a5
- 570:	fec42703          	lw	a4,-20(s0)
- 574:	8fd9                	or	a5,a5,a4
- 576:	fef42623          	sw	a5,-20(s0)
- 57a:	fd842783          	lw	a5,-40(s0)
- 57e:	8b89                	and	a5,a5,2
- 580:	ef91                	bnez	a5,59c <set_gpio_pin_irq_type+0x7e>
- 582:	fdc42783          	lw	a5,-36(s0)
- 586:	4705                	li	a4,1
- 588:	00f717b3          	sll	a5,a4,a5
- 58c:	fff7c793          	not	a5,a5
- 590:	fe842703          	lw	a4,-24(s0)
- 594:	8ff9                	and	a5,a5,a4
- 596:	fef42423          	sw	a5,-24(s0)
- 59a:	a819                	j	5b0 <set_gpio_pin_irq_type+0x92>
- 59c:	fdc42783          	lw	a5,-36(s0)
- 5a0:	4705                	li	a4,1
- 5a2:	00f717b3          	sll	a5,a4,a5
- 5a6:	fe842703          	lw	a4,-24(s0)
- 5aa:	8fd9                	or	a5,a5,a4
- 5ac:	fef42423          	sw	a5,-24(s0)
- 5b0:	1a1017b7          	lui	a5,0x1a101
- 5b4:	07c1                	add	a5,a5,16 # 1a101010 <_stack_start+0x19ff9010>
- 5b6:	fec42703          	lw	a4,-20(s0)
- 5ba:	c398                	sw	a4,0(a5)
- 5bc:	1a1017b7          	lui	a5,0x1a101
- 5c0:	07d1                	add	a5,a5,20 # 1a101014 <_stack_start+0x19ff9014>
- 5c2:	fe842703          	lw	a4,-24(s0)
- 5c6:	c398                	sw	a4,0(a5)
- 5c8:	0001                	nop
- 5ca:	5432                	lw	s0,44(sp)
- 5cc:	6145                	add	sp,sp,48
- 5ce:	8082                	ret
+00000522 <set_gpio_pin_irq_en>:
+ 522:	7179                	add	sp,sp,-48
+ 524:	d622                	sw	s0,44(sp)
+ 526:	1800                	add	s0,sp,48
+ 528:	fca42e23          	sw	a0,-36(s0)
+ 52c:	fcb42c23          	sw	a1,-40(s0)
+ 530:	1a1017b7          	lui	a5,0x1a101
+ 534:	07b1                	add	a5,a5,12 # 1a10100c <_stack_start+0x19ff900c>
+ 536:	439c                	lw	a5,0(a5)
+ 538:	fef42623          	sw	a5,-20(s0)
+ 53c:	fd842783          	lw	a5,-40(s0)
+ 540:	ef91                	bnez	a5,55c <set_gpio_pin_irq_en+0x3a>
+ 542:	fdc42783          	lw	a5,-36(s0)
+ 546:	4705                	li	a4,1
+ 548:	00f717b3          	sll	a5,a4,a5
+ 54c:	fff7c793          	not	a5,a5
+ 550:	fec42703          	lw	a4,-20(s0)
+ 554:	8ff9                	and	a5,a5,a4
+ 556:	fef42623          	sw	a5,-20(s0)
+ 55a:	a819                	j	570 <set_gpio_pin_irq_en+0x4e>
+ 55c:	fdc42783          	lw	a5,-36(s0)
+ 560:	4705                	li	a4,1
+ 562:	00f717b3          	sll	a5,a4,a5
+ 566:	fec42703          	lw	a4,-20(s0)
+ 56a:	8fd9                	or	a5,a5,a4
+ 56c:	fef42623          	sw	a5,-20(s0)
+ 570:	1a1017b7          	lui	a5,0x1a101
+ 574:	07b1                	add	a5,a5,12 # 1a10100c <_stack_start+0x19ff900c>
+ 576:	fec42703          	lw	a4,-20(s0)
+ 57a:	c398                	sw	a4,0(a5)
+ 57c:	0001                	nop
+ 57e:	5432                	lw	s0,44(sp)
+ 580:	6145                	add	sp,sp,48
+ 582:	8082                	ret
 
-000005d0 <get_gpio_irq_status>:
- 5d0:	1141                	add	sp,sp,-16
- 5d2:	c622                	sw	s0,12(sp)
- 5d4:	0800                	add	s0,sp,16
- 5d6:	1a1017b7          	lui	a5,0x1a101
- 5da:	07e1                	add	a5,a5,24 # 1a101018 <_stack_start+0x19ff9018>
- 5dc:	439c                	lw	a5,0(a5)
- 5de:	853e                	mv	a0,a5
- 5e0:	4432                	lw	s0,12(sp)
- 5e2:	0141                	add	sp,sp,16
- 5e4:	8082                	ret
-
-000005e6 <uart_set_cfg>:
- 5e6:	1101                	add	sp,sp,-32
- 5e8:	ce22                	sw	s0,28(sp)
- 5ea:	1000                	add	s0,sp,32
- 5ec:	fea42623          	sw	a0,-20(s0)
- 5f0:	87ae                	mv	a5,a1
- 5f2:	fef41523          	sh	a5,-22(s0)
- 5f6:	1a1077b7          	lui	a5,0x1a107
- 5fa:	0791                	add	a5,a5,4 # 1a107004 <_stack_start+0x19fff004>
- 5fc:	4398                	lw	a4,0(a5)
- 5fe:	1a1077b7          	lui	a5,0x1a107
- 602:	0791                	add	a5,a5,4 # 1a107004 <_stack_start+0x19fff004>
- 604:	00276713          	or	a4,a4,2
- 608:	c398                	sw	a4,0(a5)
- 60a:	1a1007b7          	lui	a5,0x1a100
- 60e:	07b1                	add	a5,a5,12 # 1a10000c <_stack_start+0x19ff800c>
- 610:	08300713          	li	a4,131
- 614:	c398                	sw	a4,0(a5)
- 616:	fea45783          	lhu	a5,-22(s0)
- 61a:	83a1                	srl	a5,a5,0x8
- 61c:	07c2                	sll	a5,a5,0x10
- 61e:	83c1                	srl	a5,a5,0x10
- 620:	873e                	mv	a4,a5
- 622:	1a1007b7          	lui	a5,0x1a100
- 626:	0791                	add	a5,a5,4 # 1a100004 <_stack_start+0x19ff8004>
- 628:	0ff77713          	zext.b	a4,a4
+00000584 <set_gpio_pin_irq_type>:
+ 584:	7179                	add	sp,sp,-48
+ 586:	d622                	sw	s0,44(sp)
+ 588:	1800                	add	s0,sp,48
+ 58a:	fca42e23          	sw	a0,-36(s0)
+ 58e:	fcb42c23          	sw	a1,-40(s0)
+ 592:	1a1017b7          	lui	a5,0x1a101
+ 596:	07c1                	add	a5,a5,16 # 1a101010 <_stack_start+0x19ff9010>
+ 598:	439c                	lw	a5,0(a5)
+ 59a:	fef42623          	sw	a5,-20(s0)
+ 59e:	1a1017b7          	lui	a5,0x1a101
+ 5a2:	07d1                	add	a5,a5,20 # 1a101014 <_stack_start+0x19ff9014>
+ 5a4:	439c                	lw	a5,0(a5)
+ 5a6:	fef42423          	sw	a5,-24(s0)
+ 5aa:	fd842783          	lw	a5,-40(s0)
+ 5ae:	8b85                	and	a5,a5,1
+ 5b0:	ef91                	bnez	a5,5cc <set_gpio_pin_irq_type+0x48>
+ 5b2:	fdc42783          	lw	a5,-36(s0)
+ 5b6:	4705                	li	a4,1
+ 5b8:	00f717b3          	sll	a5,a4,a5
+ 5bc:	fff7c793          	not	a5,a5
+ 5c0:	fec42703          	lw	a4,-20(s0)
+ 5c4:	8ff9                	and	a5,a5,a4
+ 5c6:	fef42623          	sw	a5,-20(s0)
+ 5ca:	a819                	j	5e0 <set_gpio_pin_irq_type+0x5c>
+ 5cc:	fdc42783          	lw	a5,-36(s0)
+ 5d0:	4705                	li	a4,1
+ 5d2:	00f717b3          	sll	a5,a4,a5
+ 5d6:	fec42703          	lw	a4,-20(s0)
+ 5da:	8fd9                	or	a5,a5,a4
+ 5dc:	fef42623          	sw	a5,-20(s0)
+ 5e0:	fd842783          	lw	a5,-40(s0)
+ 5e4:	8b89                	and	a5,a5,2
+ 5e6:	ef91                	bnez	a5,602 <set_gpio_pin_irq_type+0x7e>
+ 5e8:	fdc42783          	lw	a5,-36(s0)
+ 5ec:	4705                	li	a4,1
+ 5ee:	00f717b3          	sll	a5,a4,a5
+ 5f2:	fff7c793          	not	a5,a5
+ 5f6:	fe842703          	lw	a4,-24(s0)
+ 5fa:	8ff9                	and	a5,a5,a4
+ 5fc:	fef42423          	sw	a5,-24(s0)
+ 600:	a819                	j	616 <set_gpio_pin_irq_type+0x92>
+ 602:	fdc42783          	lw	a5,-36(s0)
+ 606:	4705                	li	a4,1
+ 608:	00f717b3          	sll	a5,a4,a5
+ 60c:	fe842703          	lw	a4,-24(s0)
+ 610:	8fd9                	or	a5,a5,a4
+ 612:	fef42423          	sw	a5,-24(s0)
+ 616:	1a1017b7          	lui	a5,0x1a101
+ 61a:	07c1                	add	a5,a5,16 # 1a101010 <_stack_start+0x19ff9010>
+ 61c:	fec42703          	lw	a4,-20(s0)
+ 620:	c398                	sw	a4,0(a5)
+ 622:	1a1017b7          	lui	a5,0x1a101
+ 626:	07d1                	add	a5,a5,20 # 1a101014 <_stack_start+0x19ff9014>
+ 628:	fe842703          	lw	a4,-24(s0)
  62c:	c398                	sw	a4,0(a5)
- 62e:	fea45703          	lhu	a4,-22(s0)
- 632:	1a1007b7          	lui	a5,0x1a100
- 636:	0ff77713          	zext.b	a4,a4
- 63a:	c398                	sw	a4,0(a5)
- 63c:	1a1007b7          	lui	a5,0x1a100
- 640:	07a1                	add	a5,a5,8 # 1a100008 <_stack_start+0x19ff8008>
- 642:	0a700713          	li	a4,167
- 646:	c398                	sw	a4,0(a5)
- 648:	1a1007b7          	lui	a5,0x1a100
- 64c:	07b1                	add	a5,a5,12 # 1a10000c <_stack_start+0x19ff800c>
- 64e:	470d                	li	a4,3
- 650:	c398                	sw	a4,0(a5)
- 652:	1a1007b7          	lui	a5,0x1a100
- 656:	0791                	add	a5,a5,4 # 1a100004 <_stack_start+0x19ff8004>
- 658:	439c                	lw	a5,0(a5)
- 65a:	0f07f713          	and	a4,a5,240
- 65e:	1a1007b7          	lui	a5,0x1a100
- 662:	0791                	add	a5,a5,4 # 1a100004 <_stack_start+0x19ff8004>
- 664:	00276713          	or	a4,a4,2
- 668:	c398                	sw	a4,0(a5)
- 66a:	0001                	nop
- 66c:	4472                	lw	s0,28(sp)
- 66e:	6105                	add	sp,sp,32
- 670:	8082                	ret
+ 62e:	0001                	nop
+ 630:	5432                	lw	s0,44(sp)
+ 632:	6145                	add	sp,sp,48
+ 634:	8082                	ret
 
-00000672 <uart_send>:
- 672:	7179                	add	sp,sp,-48
- 674:	d622                	sw	s0,44(sp)
- 676:	1800                	add	s0,sp,48
- 678:	fca42e23          	sw	a0,-36(s0)
- 67c:	fcb42c23          	sw	a1,-40(s0)
- 680:	a891                	j	6d4 <uart_send+0x62>
- 682:	0001                	nop
- 684:	1a1007b7          	lui	a5,0x1a100
- 688:	07d1                	add	a5,a5,20 # 1a100014 <_stack_start+0x19ff8014>
- 68a:	439c                	lw	a5,0(a5)
- 68c:	0207f793          	and	a5,a5,32
- 690:	dbf5                	beqz	a5,684 <uart_send+0x12>
- 692:	fe042623          	sw	zero,-20(s0)
- 696:	a035                	j	6c2 <uart_send+0x50>
- 698:	fdc42783          	lw	a5,-36(s0)
- 69c:	00178713          	add	a4,a5,1
- 6a0:	fce42e23          	sw	a4,-36(s0)
- 6a4:	0007c703          	lbu	a4,0(a5)
- 6a8:	1a1007b7          	lui	a5,0x1a100
+00000636 <get_gpio_irq_status>:
+ 636:	1141                	add	sp,sp,-16
+ 638:	c622                	sw	s0,12(sp)
+ 63a:	0800                	add	s0,sp,16
+ 63c:	1a1017b7          	lui	a5,0x1a101
+ 640:	07e1                	add	a5,a5,24 # 1a101018 <_stack_start+0x19ff9018>
+ 642:	439c                	lw	a5,0(a5)
+ 644:	853e                	mv	a0,a5
+ 646:	4432                	lw	s0,12(sp)
+ 648:	0141                	add	sp,sp,16
+ 64a:	8082                	ret
+
+0000064c <uart_set_cfg>:
+ 64c:	1101                	add	sp,sp,-32
+ 64e:	ce22                	sw	s0,28(sp)
+ 650:	1000                	add	s0,sp,32
+ 652:	fea42623          	sw	a0,-20(s0)
+ 656:	87ae                	mv	a5,a1
+ 658:	fef41523          	sh	a5,-22(s0)
+ 65c:	1a1077b7          	lui	a5,0x1a107
+ 660:	0791                	add	a5,a5,4 # 1a107004 <_stack_start+0x19fff004>
+ 662:	4398                	lw	a4,0(a5)
+ 664:	1a1077b7          	lui	a5,0x1a107
+ 668:	0791                	add	a5,a5,4 # 1a107004 <_stack_start+0x19fff004>
+ 66a:	00276713          	or	a4,a4,2
+ 66e:	c398                	sw	a4,0(a5)
+ 670:	1a1007b7          	lui	a5,0x1a100
+ 674:	07b1                	add	a5,a5,12 # 1a10000c <_stack_start+0x19ff800c>
+ 676:	08300713          	li	a4,131
+ 67a:	c398                	sw	a4,0(a5)
+ 67c:	fea45783          	lhu	a5,-22(s0)
+ 680:	83a1                	srl	a5,a5,0x8
+ 682:	07c2                	sll	a5,a5,0x10
+ 684:	83c1                	srl	a5,a5,0x10
+ 686:	873e                	mv	a4,a5
+ 688:	1a1007b7          	lui	a5,0x1a100
+ 68c:	0791                	add	a5,a5,4 # 1a100004 <_stack_start+0x19ff8004>
+ 68e:	0ff77713          	zext.b	a4,a4
+ 692:	c398                	sw	a4,0(a5)
+ 694:	fea45703          	lhu	a4,-22(s0)
+ 698:	1a1007b7          	lui	a5,0x1a100
+ 69c:	0ff77713          	zext.b	a4,a4
+ 6a0:	c398                	sw	a4,0(a5)
+ 6a2:	1a1007b7          	lui	a5,0x1a100
+ 6a6:	07a1                	add	a5,a5,8 # 1a100008 <_stack_start+0x19ff8008>
+ 6a8:	0a700713          	li	a4,167
  6ac:	c398                	sw	a4,0(a5)
- 6ae:	fd842783          	lw	a5,-40(s0)
- 6b2:	17fd                	add	a5,a5,-1 # 1a0fffff <_stack_start+0x19ff7fff>
- 6b4:	fcf42c23          	sw	a5,-40(s0)
- 6b8:	fec42783          	lw	a5,-20(s0)
- 6bc:	0785                	add	a5,a5,1
- 6be:	fef42623          	sw	a5,-20(s0)
- 6c2:	fec42703          	lw	a4,-20(s0)
- 6c6:	03f00793          	li	a5,63
- 6ca:	00e7e563          	bltu	a5,a4,6d4 <uart_send+0x62>
- 6ce:	fd842783          	lw	a5,-40(s0)
- 6d2:	f3f9                	bnez	a5,698 <uart_send+0x26>
- 6d4:	fd842783          	lw	a5,-40(s0)
- 6d8:	f7cd                	bnez	a5,682 <uart_send+0x10>
- 6da:	0001                	nop
- 6dc:	0001                	nop
- 6de:	5432                	lw	s0,44(sp)
- 6e0:	6145                	add	sp,sp,48
- 6e2:	8082                	ret
+ 6ae:	1a1007b7          	lui	a5,0x1a100
+ 6b2:	07b1                	add	a5,a5,12 # 1a10000c <_stack_start+0x19ff800c>
+ 6b4:	470d                	li	a4,3
+ 6b6:	c398                	sw	a4,0(a5)
+ 6b8:	1a1007b7          	lui	a5,0x1a100
+ 6bc:	0791                	add	a5,a5,4 # 1a100004 <_stack_start+0x19ff8004>
+ 6be:	439c                	lw	a5,0(a5)
+ 6c0:	0f07f713          	and	a4,a5,240
+ 6c4:	1a1007b7          	lui	a5,0x1a100
+ 6c8:	0791                	add	a5,a5,4 # 1a100004 <_stack_start+0x19ff8004>
+ 6ca:	00276713          	or	a4,a4,2
+ 6ce:	c398                	sw	a4,0(a5)
+ 6d0:	0001                	nop
+ 6d2:	4472                	lw	s0,28(sp)
+ 6d4:	6105                	add	sp,sp,32
+ 6d6:	8082                	ret
 
-000006e4 <uart_getchar>:
- 6e4:	1141                	add	sp,sp,-16
- 6e6:	c622                	sw	s0,12(sp)
- 6e8:	0800                	add	s0,sp,16
- 6ea:	0001                	nop
- 6ec:	1a1007b7          	lui	a5,0x1a100
- 6f0:	07d1                	add	a5,a5,20 # 1a100014 <_stack_start+0x19ff8014>
- 6f2:	439c                	lw	a5,0(a5)
- 6f4:	0017f713          	and	a4,a5,1
- 6f8:	4785                	li	a5,1
- 6fa:	fef719e3          	bne	a4,a5,6ec <uart_getchar+0x8>
- 6fe:	1a1007b7          	lui	a5,0x1a100
- 702:	439c                	lw	a5,0(a5)
- 704:	0ff7f793          	zext.b	a5,a5
- 708:	853e                	mv	a0,a5
- 70a:	4432                	lw	s0,12(sp)
- 70c:	0141                	add	sp,sp,16
- 70e:	8082                	ret
+000006d8 <uart_send>:
+ 6d8:	7179                	add	sp,sp,-48
+ 6da:	d622                	sw	s0,44(sp)
+ 6dc:	1800                	add	s0,sp,48
+ 6de:	fca42e23          	sw	a0,-36(s0)
+ 6e2:	fcb42c23          	sw	a1,-40(s0)
+ 6e6:	a891                	j	73a <uart_send+0x62>
+ 6e8:	0001                	nop
+ 6ea:	1a1007b7          	lui	a5,0x1a100
+ 6ee:	07d1                	add	a5,a5,20 # 1a100014 <_stack_start+0x19ff8014>
+ 6f0:	439c                	lw	a5,0(a5)
+ 6f2:	0207f793          	and	a5,a5,32
+ 6f6:	dbf5                	beqz	a5,6ea <uart_send+0x12>
+ 6f8:	fe042623          	sw	zero,-20(s0)
+ 6fc:	a035                	j	728 <uart_send+0x50>
+ 6fe:	fdc42783          	lw	a5,-36(s0)
+ 702:	00178713          	add	a4,a5,1
+ 706:	fce42e23          	sw	a4,-36(s0)
+ 70a:	0007c703          	lbu	a4,0(a5)
+ 70e:	1a1007b7          	lui	a5,0x1a100
+ 712:	c398                	sw	a4,0(a5)
+ 714:	fd842783          	lw	a5,-40(s0)
+ 718:	17fd                	add	a5,a5,-1 # 1a0fffff <_stack_start+0x19ff7fff>
+ 71a:	fcf42c23          	sw	a5,-40(s0)
+ 71e:	fec42783          	lw	a5,-20(s0)
+ 722:	0785                	add	a5,a5,1
+ 724:	fef42623          	sw	a5,-20(s0)
+ 728:	fec42703          	lw	a4,-20(s0)
+ 72c:	03f00793          	li	a5,63
+ 730:	00e7e563          	bltu	a5,a4,73a <uart_send+0x62>
+ 734:	fd842783          	lw	a5,-40(s0)
+ 738:	f3f9                	bnez	a5,6fe <uart_send+0x26>
+ 73a:	fd842783          	lw	a5,-40(s0)
+ 73e:	f7cd                	bnez	a5,6e8 <uart_send+0x10>
+ 740:	0001                	nop
+ 742:	0001                	nop
+ 744:	5432                	lw	s0,44(sp)
+ 746:	6145                	add	sp,sp,48
+ 748:	8082                	ret
 
-00000710 <uart_sendchar>:
- 710:	1101                	add	sp,sp,-32
- 712:	ce22                	sw	s0,28(sp)
- 714:	1000                	add	s0,sp,32
- 716:	87aa                	mv	a5,a0
- 718:	fef407a3          	sb	a5,-17(s0)
- 71c:	0001                	nop
- 71e:	1a1007b7          	lui	a5,0x1a100
- 722:	07d1                	add	a5,a5,20 # 1a100014 <_stack_start+0x19ff8014>
- 724:	439c                	lw	a5,0(a5)
- 726:	0207f793          	and	a5,a5,32
- 72a:	dbf5                	beqz	a5,71e <uart_sendchar+0xe>
- 72c:	1a1007b7          	lui	a5,0x1a100
- 730:	fef44703          	lbu	a4,-17(s0)
- 734:	c398                	sw	a4,0(a5)
- 736:	0001                	nop
- 738:	4472                	lw	s0,28(sp)
- 73a:	6105                	add	sp,sp,32
- 73c:	8082                	ret
+0000074a <uart_getchar>:
+ 74a:	1141                	add	sp,sp,-16
+ 74c:	c622                	sw	s0,12(sp)
+ 74e:	0800                	add	s0,sp,16
+ 750:	0001                	nop
+ 752:	1a1007b7          	lui	a5,0x1a100
+ 756:	07d1                	add	a5,a5,20 # 1a100014 <_stack_start+0x19ff8014>
+ 758:	439c                	lw	a5,0(a5)
+ 75a:	0017f713          	and	a4,a5,1
+ 75e:	4785                	li	a5,1
+ 760:	fef719e3          	bne	a4,a5,752 <uart_getchar+0x8>
+ 764:	1a1007b7          	lui	a5,0x1a100
+ 768:	439c                	lw	a5,0(a5)
+ 76a:	0ff7f793          	zext.b	a5,a5
+ 76e:	853e                	mv	a0,a5
+ 770:	4432                	lw	s0,12(sp)
+ 772:	0141                	add	sp,sp,16
+ 774:	8082                	ret
 
-0000073e <uart_wait_tx_done>:
- 73e:	1141                	add	sp,sp,-16
- 740:	c622                	sw	s0,12(sp)
- 742:	0800                	add	s0,sp,16
- 744:	0001                	nop
- 746:	1a1007b7          	lui	a5,0x1a100
- 74a:	07d1                	add	a5,a5,20 # 1a100014 <_stack_start+0x19ff8014>
- 74c:	439c                	lw	a5,0(a5)
- 74e:	0407f793          	and	a5,a5,64
- 752:	dbf5                	beqz	a5,746 <uart_wait_tx_done+0x8>
- 754:	0001                	nop
- 756:	0001                	nop
- 758:	4432                	lw	s0,12(sp)
- 75a:	0141                	add	sp,sp,16
- 75c:	8082                	ret
+00000776 <uart_sendchar>:
+ 776:	1101                	add	sp,sp,-32
+ 778:	ce22                	sw	s0,28(sp)
+ 77a:	1000                	add	s0,sp,32
+ 77c:	87aa                	mv	a5,a0
+ 77e:	fef407a3          	sb	a5,-17(s0)
+ 782:	0001                	nop
+ 784:	1a1007b7          	lui	a5,0x1a100
+ 788:	07d1                	add	a5,a5,20 # 1a100014 <_stack_start+0x19ff8014>
+ 78a:	439c                	lw	a5,0(a5)
+ 78c:	0207f793          	and	a5,a5,32
+ 790:	dbf5                	beqz	a5,784 <uart_sendchar+0xe>
+ 792:	1a1007b7          	lui	a5,0x1a100
+ 796:	fef44703          	lbu	a4,-17(s0)
+ 79a:	c398                	sw	a4,0(a5)
+ 79c:	0001                	nop
+ 79e:	4472                	lw	s0,28(sp)
+ 7a0:	6105                	add	sp,sp,32
+ 7a2:	8082                	ret
 
-0000075e <exit>:
- 75e:	1101                	add	sp,sp,-32
- 760:	ce06                	sw	ra,28(sp)
- 762:	cc22                	sw	s0,24(sp)
- 764:	1000                	add	s0,sp,32
- 766:	fea42623          	sw	a0,-20(s0)
- 76a:	fec42503          	lw	a0,-20(s0)
- 76e:	2011                	jal	772 <eoc>
- 770:	a001                	j	770 <exit+0x12>
+000007a4 <uart_wait_tx_done>:
+ 7a4:	1141                	add	sp,sp,-16
+ 7a6:	c622                	sw	s0,12(sp)
+ 7a8:	0800                	add	s0,sp,16
+ 7aa:	0001                	nop
+ 7ac:	1a1007b7          	lui	a5,0x1a100
+ 7b0:	07d1                	add	a5,a5,20 # 1a100014 <_stack_start+0x19ff8014>
+ 7b2:	439c                	lw	a5,0(a5)
+ 7b4:	0407f793          	and	a5,a5,64
+ 7b8:	dbf5                	beqz	a5,7ac <uart_wait_tx_done+0x8>
+ 7ba:	0001                	nop
+ 7bc:	0001                	nop
+ 7be:	4432                	lw	s0,12(sp)
+ 7c0:	0141                	add	sp,sp,16
+ 7c2:	8082                	ret
 
-00000772 <eoc>:
- 772:	1101                	add	sp,sp,-32
- 774:	ce06                	sw	ra,28(sp)
- 776:	cc22                	sw	s0,24(sp)
- 778:	1000                	add	s0,sp,32
- 77a:	fea42623          	sw	a0,-20(s0)
- 77e:	fec42783          	lw	a5,-20(s0)
- 782:	c799                	beqz	a5,790 <eoc+0x1e>
- 784:	1a1077b7          	lui	a5,0x1a107
- 788:	07d1                	add	a5,a5,20 # 1a107014 <_stack_start+0x19fff014>
- 78a:	4705                	li	a4,1
- 78c:	c398                	sw	a4,0(a5)
- 78e:	a031                	j	79a <eoc+0x28>
- 790:	1a1077b7          	lui	a5,0x1a107
- 794:	07d1                	add	a5,a5,20 # 1a107014 <_stack_start+0x19fff014>
- 796:	0007a023          	sw	zero,0(a5)
- 79a:	1a1077b7          	lui	a5,0x1a107
- 79e:	0791                	add	a5,a5,4 # 1a107004 <_stack_start+0x19fff004>
- 7a0:	4398                	lw	a4,0(a5)
- 7a2:	1a1077b7          	lui	a5,0x1a107
- 7a6:	0791                	add	a5,a5,4 # 1a107004 <_stack_start+0x19fff004>
- 7a8:	00476713          	or	a4,a4,4
- 7ac:	c398                	sw	a4,0(a5)
- 7ae:	4585                	li	a1,1
- 7b0:	4521                	li	a0,8
- 7b2:	3ea1                	jal	30a <set_pin_function>
- 7b4:	4585                	li	a1,1
- 7b6:	4521                	li	a0,8
- 7b8:	3ef1                	jal	394 <set_gpio_pin_direction>
- 7ba:	4585                	li	a1,1
- 7bc:	4521                	li	a0,8
- 7be:	31a5                	jal	426 <set_gpio_pin_value>
- 7c0:	0001                	nop
- 7c2:	40f2                	lw	ra,28(sp)
- 7c4:	4462                	lw	s0,24(sp)
- 7c6:	6105                	add	sp,sp,32
- 7c8:	8082                	ret
+000007c4 <exit>:
+ 7c4:	1101                	add	sp,sp,-32
+ 7c6:	ce06                	sw	ra,28(sp)
+ 7c8:	cc22                	sw	s0,24(sp)
+ 7ca:	1000                	add	s0,sp,32
+ 7cc:	fea42623          	sw	a0,-20(s0)
+ 7d0:	fec42503          	lw	a0,-20(s0)
+ 7d4:	2011                	jal	7d8 <eoc>
+ 7d6:	a001                	j	7d6 <exit+0x12>
 
-000007ca <sleep_busy>:
- 7ca:	7179                	add	sp,sp,-48
- 7cc:	d622                	sw	s0,44(sp)
- 7ce:	1800                	add	s0,sp,48
- 7d0:	fca42e23          	sw	a0,-36(s0)
- 7d4:	fe042623          	sw	zero,-20(s0)
- 7d8:	a039                	j	7e6 <sleep_busy+0x1c>
- 7da:	0001                	nop
- 7dc:	fec42783          	lw	a5,-20(s0)
- 7e0:	0785                	add	a5,a5,1
- 7e2:	fef42623          	sw	a5,-20(s0)
- 7e6:	fdc42783          	lw	a5,-36(s0)
- 7ea:	fec42703          	lw	a4,-20(s0)
- 7ee:	fef746e3          	blt	a4,a5,7da <sleep_busy+0x10>
- 7f2:	0001                	nop
- 7f4:	0001                	nop
- 7f6:	5432                	lw	s0,44(sp)
- 7f8:	6145                	add	sp,sp,48
- 7fa:	8082                	ret
+000007d8 <eoc>:
+ 7d8:	1101                	add	sp,sp,-32
+ 7da:	ce06                	sw	ra,28(sp)
+ 7dc:	cc22                	sw	s0,24(sp)
+ 7de:	1000                	add	s0,sp,32
+ 7e0:	fea42623          	sw	a0,-20(s0)
+ 7e4:	fec42783          	lw	a5,-20(s0)
+ 7e8:	c799                	beqz	a5,7f6 <eoc+0x1e>
+ 7ea:	1a1077b7          	lui	a5,0x1a107
+ 7ee:	07d1                	add	a5,a5,20 # 1a107014 <_stack_start+0x19fff014>
+ 7f0:	4705                	li	a4,1
+ 7f2:	c398                	sw	a4,0(a5)
+ 7f4:	a031                	j	800 <eoc+0x28>
+ 7f6:	1a1077b7          	lui	a5,0x1a107
+ 7fa:	07d1                	add	a5,a5,20 # 1a107014 <_stack_start+0x19fff014>
+ 7fc:	0007a023          	sw	zero,0(a5)
+ 800:	1a1077b7          	lui	a5,0x1a107
+ 804:	0791                	add	a5,a5,4 # 1a107004 <_stack_start+0x19fff004>
+ 806:	4398                	lw	a4,0(a5)
+ 808:	1a1077b7          	lui	a5,0x1a107
+ 80c:	0791                	add	a5,a5,4 # 1a107004 <_stack_start+0x19fff004>
+ 80e:	00476713          	or	a4,a4,4
+ 812:	c398                	sw	a4,0(a5)
+ 814:	4585                	li	a1,1
+ 816:	4521                	li	a0,8
+ 818:	3ea1                	jal	370 <set_pin_function>
+ 81a:	4585                	li	a1,1
+ 81c:	4521                	li	a0,8
+ 81e:	3ef1                	jal	3fa <set_gpio_pin_direction>
+ 820:	4585                	li	a1,1
+ 822:	4521                	li	a0,8
+ 824:	31a5                	jal	48c <set_gpio_pin_value>
+ 826:	0001                	nop
+ 828:	40f2                	lw	ra,28(sp)
+ 82a:	4462                	lw	s0,24(sp)
+ 82c:	6105                	add	sp,sp,32
+ 82e:	8082                	ret
 
-000007fc <ISR_I2C>:
- 7fc:	1141                	add	sp,sp,-16
- 7fe:	c622                	sw	s0,12(sp)
- 800:	0800                	add	s0,sp,16
- 802:	a001                	j	802 <ISR_I2C+0x6>
-
-00000804 <ISR_UART>:
- 804:	1141                	add	sp,sp,-16
- 806:	c622                	sw	s0,12(sp)
- 808:	0800                	add	s0,sp,16
- 80a:	a001                	j	80a <ISR_UART+0x6>
-
-0000080c <ISR_GPIO>:
- 80c:	1141                	add	sp,sp,-16
- 80e:	c622                	sw	s0,12(sp)
- 810:	0800                	add	s0,sp,16
- 812:	a001                	j	812 <ISR_GPIO+0x6>
-
-00000814 <ISR_SPIM0>:
- 814:	1141                	add	sp,sp,-16
- 816:	c622                	sw	s0,12(sp)
- 818:	0800                	add	s0,sp,16
- 81a:	a001                	j	81a <ISR_SPIM0+0x6>
-
-0000081c <ISR_SPIM1>:
- 81c:	1141                	add	sp,sp,-16
- 81e:	c622                	sw	s0,12(sp)
- 820:	0800                	add	s0,sp,16
- 822:	a001                	j	822 <ISR_SPIM1+0x6>
-
-00000824 <ISR_TA_OVF>:
- 824:	1141                	add	sp,sp,-16
- 826:	c622                	sw	s0,12(sp)
- 828:	0800                	add	s0,sp,16
- 82a:	a001                	j	82a <ISR_TA_OVF+0x6>
-
-0000082c <ISR_TA_CMP>:
- 82c:	1141                	add	sp,sp,-16
- 82e:	c622                	sw	s0,12(sp)
- 830:	0800                	add	s0,sp,16
- 832:	a001                	j	832 <ISR_TA_CMP+0x6>
-
-00000834 <ISR_TB_OVF>:
- 834:	1141                	add	sp,sp,-16
- 836:	c622                	sw	s0,12(sp)
- 838:	0800                	add	s0,sp,16
- 83a:	a001                	j	83a <ISR_TB_OVF+0x6>
-
-0000083c <ISR_TB_CMP>:
- 83c:	1141                	add	sp,sp,-16
- 83e:	c622                	sw	s0,12(sp)
- 840:	0800                	add	s0,sp,16
- 842:	a001                	j	842 <ISR_TB_CMP+0x6>
-
-00000844 <cipher_write_data>:
- 844:	1101                	add	sp,sp,-32
- 846:	ce22                	sw	s0,28(sp)
- 848:	1000                	add	s0,sp,32
- 84a:	fea42623          	sw	a0,-20(s0)
- 84e:	1a1087b7          	lui	a5,0x1a108
- 852:	07d1                	add	a5,a5,20 # 1a108014 <_stack_start+0x1a000014>
- 854:	fec42703          	lw	a4,-20(s0)
- 858:	c398                	sw	a4,0(a5)
+00000830 <sleep_busy>:
+ 830:	7179                	add	sp,sp,-48
+ 832:	d622                	sw	s0,44(sp)
+ 834:	1800                	add	s0,sp,48
+ 836:	fca42e23          	sw	a0,-36(s0)
+ 83a:	fe042623          	sw	zero,-20(s0)
+ 83e:	a039                	j	84c <sleep_busy+0x1c>
+ 840:	0001                	nop
+ 842:	fec42783          	lw	a5,-20(s0)
+ 846:	0785                	add	a5,a5,1
+ 848:	fef42623          	sw	a5,-20(s0)
+ 84c:	fdc42783          	lw	a5,-36(s0)
+ 850:	fec42703          	lw	a4,-20(s0)
+ 854:	fef746e3          	blt	a4,a5,840 <sleep_busy+0x10>
+ 858:	0001                	nop
  85a:	0001                	nop
- 85c:	4472                	lw	s0,28(sp)
- 85e:	6105                	add	sp,sp,32
+ 85c:	5432                	lw	s0,44(sp)
+ 85e:	6145                	add	sp,sp,48
  860:	8082                	ret
 
-00000862 <cipher_read_data>:
- 862:	1101                	add	sp,sp,-32
- 864:	ce22                	sw	s0,28(sp)
- 866:	1000                	add	s0,sp,32
- 868:	fea42623          	sw	a0,-20(s0)
- 86c:	1a1087b7          	lui	a5,0x1a108
- 870:	02478793          	add	a5,a5,36 # 1a108024 <_stack_start+0x1a000024>
- 874:	439c                	lw	a5,0(a5)
- 876:	fef42623          	sw	a5,-20(s0)
- 87a:	0001                	nop
- 87c:	4472                	lw	s0,28(sp)
- 87e:	6105                	add	sp,sp,32
- 880:	8082                	ret
+00000862 <ISR_I2C>:
+ 862:	1141                	add	sp,sp,-16
+ 864:	c622                	sw	s0,12(sp)
+ 866:	0800                	add	s0,sp,16
+ 868:	a001                	j	868 <ISR_I2C+0x6>
 
-00000882 <cipher_reset>:
+0000086a <ISR_UART>:
+ 86a:	1141                	add	sp,sp,-16
+ 86c:	c622                	sw	s0,12(sp)
+ 86e:	0800                	add	s0,sp,16
+ 870:	a001                	j	870 <ISR_UART+0x6>
+
+00000872 <ISR_GPIO>:
+ 872:	1141                	add	sp,sp,-16
+ 874:	c622                	sw	s0,12(sp)
+ 876:	0800                	add	s0,sp,16
+ 878:	a001                	j	878 <ISR_GPIO+0x6>
+
+0000087a <ISR_SPIM0>:
+ 87a:	1141                	add	sp,sp,-16
+ 87c:	c622                	sw	s0,12(sp)
+ 87e:	0800                	add	s0,sp,16
+ 880:	a001                	j	880 <ISR_SPIM0+0x6>
+
+00000882 <ISR_SPIM1>:
  882:	1141                	add	sp,sp,-16
  884:	c622                	sw	s0,12(sp)
  886:	0800                	add	s0,sp,16
- 888:	1a1087b7          	lui	a5,0x1a108
- 88c:	4705                	li	a4,1
- 88e:	c398                	sw	a4,0(a5)
- 890:	0001                	nop
- 892:	4432                	lw	s0,12(sp)
- 894:	0141                	add	sp,sp,16
- 896:	8082                	ret
+ 888:	a001                	j	888 <ISR_SPIM1+0x6>
 
-00000898 <cipher_set_req>:
- 898:	1141                	add	sp,sp,-16
- 89a:	c622                	sw	s0,12(sp)
- 89c:	0800                	add	s0,sp,16
- 89e:	1a1087b7          	lui	a5,0x1a108
- 8a2:	0791                	add	a5,a5,4 # 1a108004 <_stack_start+0x1a000004>
- 8a4:	4705                	li	a4,1
- 8a6:	c398                	sw	a4,0(a5)
- 8a8:	0001                	nop
- 8aa:	4432                	lw	s0,12(sp)
- 8ac:	0141                	add	sp,sp,16
- 8ae:	8082                	ret
+0000088a <ISR_TA_OVF>:
+ 88a:	1141                	add	sp,sp,-16
+ 88c:	c622                	sw	s0,12(sp)
+ 88e:	0800                	add	s0,sp,16
+ 890:	a001                	j	890 <ISR_TA_OVF+0x6>
 
-000008b0 <cipher_set_ack>:
- 8b0:	1141                	add	sp,sp,-16
- 8b2:	c622                	sw	s0,12(sp)
- 8b4:	0800                	add	s0,sp,16
- 8b6:	1a1087b7          	lui	a5,0x1a108
- 8ba:	07a1                	add	a5,a5,8 # 1a108008 <_stack_start+0x1a000008>
- 8bc:	4705                	li	a4,1
- 8be:	c398                	sw	a4,0(a5)
- 8c0:	1a1087b7          	lui	a5,0x1a108
- 8c4:	0791                	add	a5,a5,4 # 1a108004 <_stack_start+0x1a000004>
- 8c6:	0007a023          	sw	zero,0(a5)
- 8ca:	0001                	nop
- 8cc:	4432                	lw	s0,12(sp)
- 8ce:	0141                	add	sp,sp,16
- 8d0:	8082                	ret
+00000892 <ISR_TA_CMP>:
+ 892:	1141                	add	sp,sp,-16
+ 894:	c622                	sw	s0,12(sp)
+ 896:	0800                	add	s0,sp,16
+ 898:	a001                	j	898 <ISR_TA_CMP+0x6>
 
-000008d2 <cipher_read_valid>:
- 8d2:	1141                	add	sp,sp,-16
- 8d4:	c622                	sw	s0,12(sp)
- 8d6:	0800                	add	s0,sp,16
- 8d8:	1a1087b7          	lui	a5,0x1a108
- 8dc:	07b1                	add	a5,a5,12 # 1a10800c <_stack_start+0x1a00000c>
- 8de:	439c                	lw	a5,0(a5)
- 8e0:	0ff7f793          	zext.b	a5,a5
- 8e4:	853e                	mv	a0,a5
- 8e6:	4432                	lw	s0,12(sp)
- 8e8:	0141                	add	sp,sp,16
- 8ea:	8082                	ret
+0000089a <ISR_TB_OVF>:
+ 89a:	1141                	add	sp,sp,-16
+ 89c:	c622                	sw	s0,12(sp)
+ 89e:	0800                	add	s0,sp,16
+ 8a0:	a001                	j	8a0 <ISR_TB_OVF+0x6>
 
-000008ec <cipher_read_busy>:
- 8ec:	1141                	add	sp,sp,-16
- 8ee:	c622                	sw	s0,12(sp)
- 8f0:	0800                	add	s0,sp,16
- 8f2:	1a1087b7          	lui	a5,0x1a108
- 8f6:	07c1                	add	a5,a5,16 # 1a108010 <_stack_start+0x1a000010>
- 8f8:	439c                	lw	a5,0(a5)
- 8fa:	0ff7f793          	zext.b	a5,a5
- 8fe:	853e                	mv	a0,a5
- 900:	4432                	lw	s0,12(sp)
- 902:	0141                	add	sp,sp,16
- 904:	8082                	ret
+000008a2 <ISR_TB_CMP>:
+ 8a2:	1141                	add	sp,sp,-16
+ 8a4:	c622                	sw	s0,12(sp)
+ 8a6:	0800                	add	s0,sp,16
+ 8a8:	a001                	j	8a8 <ISR_TB_CMP+0x6>
 
-00000906 <default_exception_handler_c>:
- 906:	1141                	add	sp,sp,-16
- 908:	c622                	sw	s0,12(sp)
- 90a:	0800                	add	s0,sp,16
- 90c:	a001                	j	90c <default_exception_handler_c+0x6>
+000008aa <cipher_init>:
+ 8aa:	1141                	add	sp,sp,-16
+ 8ac:	c622                	sw	s0,12(sp)
+ 8ae:	0800                	add	s0,sp,16
+ 8b0:	001007b7          	lui	a5,0x100
+ 8b4:	1a108737          	lui	a4,0x1a108
+ 8b8:	00e7a623          	sw	a4,12(a5) # 10000c <cipher>
+ 8bc:	0001                	nop
+ 8be:	4432                	lw	s0,12(sp)
+ 8c0:	0141                	add	sp,sp,16
+ 8c2:	8082                	ret
 
-0000090e <illegal_insn_handler_c>:
- 90e:	1141                	add	sp,sp,-16
- 910:	c622                	sw	s0,12(sp)
- 912:	0800                	add	s0,sp,16
- 914:	a001                	j	914 <illegal_insn_handler_c+0x6>
+000008c4 <cipher_write_data>:
+ 8c4:	7179                	add	sp,sp,-48
+ 8c6:	d622                	sw	s0,44(sp)
+ 8c8:	1800                	add	s0,sp,48
+ 8ca:	fca42e23          	sw	a0,-36(s0)
+ 8ce:	fe0407a3          	sb	zero,-17(s0)
+ 8d2:	a035                	j	8fe <cipher_write_data+0x3a>
+ 8d4:	fef44783          	lbu	a5,-17(s0)
+ 8d8:	078a                	sll	a5,a5,0x2
+ 8da:	fdc42703          	lw	a4,-36(s0)
+ 8de:	973e                	add	a4,a4,a5
+ 8e0:	001007b7          	lui	a5,0x100
+ 8e4:	00c7a683          	lw	a3,12(a5) # 10000c <cipher>
+ 8e8:	fef44783          	lbu	a5,-17(s0)
+ 8ec:	4318                	lw	a4,0(a4)
+ 8ee:	078a                	sll	a5,a5,0x2
+ 8f0:	97b6                	add	a5,a5,a3
+ 8f2:	c3d8                	sw	a4,4(a5)
+ 8f4:	fef44783          	lbu	a5,-17(s0)
+ 8f8:	0785                	add	a5,a5,1
+ 8fa:	fef407a3          	sb	a5,-17(s0)
+ 8fe:	fef44703          	lbu	a4,-17(s0)
+ 902:	478d                	li	a5,3
+ 904:	fce7f8e3          	bgeu	a5,a4,8d4 <cipher_write_data+0x10>
+ 908:	0001                	nop
+ 90a:	0001                	nop
+ 90c:	5432                	lw	s0,44(sp)
+ 90e:	6145                	add	sp,sp,48
+ 910:	8082                	ret
 
-00000916 <ecall_insn_handler_c>:
- 916:	1141                	add	sp,sp,-16
- 918:	c622                	sw	s0,12(sp)
- 91a:	0800                	add	s0,sp,16
- 91c:	a001                	j	91c <ecall_insn_handler_c+0x6>
+00000912 <cipher_read_data>:
+ 912:	7179                	add	sp,sp,-48
+ 914:	d622                	sw	s0,44(sp)
+ 916:	1800                	add	s0,sp,48
+ 918:	fca42e23          	sw	a0,-36(s0)
+ 91c:	fe0407a3          	sb	zero,-17(s0)
+ 920:	a015                	j	944 <cipher_read_data+0x32>
+ 922:	001007b7          	lui	a5,0x100
+ 926:	00c7a703          	lw	a4,12(a5) # 10000c <cipher>
+ 92a:	fef44783          	lbu	a5,-17(s0)
+ 92e:	078a                	sll	a5,a5,0x2
+ 930:	fdc42683          	lw	a3,-36(s0)
+ 934:	97b6                	add	a5,a5,a3
+ 936:	4b58                	lw	a4,20(a4)
+ 938:	c398                	sw	a4,0(a5)
+ 93a:	fef44783          	lbu	a5,-17(s0)
+ 93e:	0785                	add	a5,a5,1
+ 940:	fef407a3          	sb	a5,-17(s0)
+ 944:	fef44703          	lbu	a4,-17(s0)
+ 948:	478d                	li	a5,3
+ 94a:	fce7fce3          	bgeu	a5,a4,922 <cipher_read_data+0x10>
+ 94e:	0001                	nop
+ 950:	0001                	nop
+ 952:	5432                	lw	s0,44(sp)
+ 954:	6145                	add	sp,sp,48
+ 956:	8082                	ret
 
-0000091e <__CTOR_LIST__>:
+00000958 <cipher_reset>:
+ 958:	1141                	add	sp,sp,-16
+ 95a:	c622                	sw	s0,12(sp)
+ 95c:	0800                	add	s0,sp,16
+ 95e:	001007b7          	lui	a5,0x100
+ 962:	00c7a783          	lw	a5,12(a5) # 10000c <cipher>
+ 966:	4705                	li	a4,1
+ 968:	c398                	sw	a4,0(a5)
+ 96a:	001007b7          	lui	a5,0x100
+ 96e:	00c7a783          	lw	a5,12(a5) # 10000c <cipher>
+ 972:	0007a023          	sw	zero,0(a5)
+ 976:	0001                	nop
+ 978:	4432                	lw	s0,12(sp)
+ 97a:	0141                	add	sp,sp,16
+ 97c:	8082                	ret
+
+0000097e <cipher_set_req>:
+ 97e:	1141                	add	sp,sp,-16
+ 980:	c622                	sw	s0,12(sp)
+ 982:	0800                	add	s0,sp,16
+ 984:	001007b7          	lui	a5,0x100
+ 988:	00c7a783          	lw	a5,12(a5) # 10000c <cipher>
+ 98c:	10000713          	li	a4,256
+ 990:	c398                	sw	a4,0(a5)
+ 992:	0001                	nop
+ 994:	4432                	lw	s0,12(sp)
+ 996:	0141                	add	sp,sp,16
+ 998:	8082                	ret
+
+0000099a <cipher_set_ack>:
+ 99a:	1141                	add	sp,sp,-16
+ 99c:	c622                	sw	s0,12(sp)
+ 99e:	0800                	add	s0,sp,16
+ 9a0:	001007b7          	lui	a5,0x100
+ 9a4:	00c7a783          	lw	a5,12(a5) # 10000c <cipher>
+ 9a8:	20000713          	li	a4,512
+ 9ac:	c398                	sw	a4,0(a5)
+ 9ae:	001007b7          	lui	a5,0x100
+ 9b2:	00c7a783          	lw	a5,12(a5) # 10000c <cipher>
+ 9b6:	0007a023          	sw	zero,0(a5)
+ 9ba:	0001                	nop
+ 9bc:	4432                	lw	s0,12(sp)
+ 9be:	0141                	add	sp,sp,16
+ 9c0:	8082                	ret
+
+000009c2 <cipher_is_valid>:
+ 9c2:	1141                	add	sp,sp,-16
+ 9c4:	c622                	sw	s0,12(sp)
+ 9c6:	0800                	add	s0,sp,16
+ 9c8:	001007b7          	lui	a5,0x100
+ 9cc:	00c7a783          	lw	a5,12(a5) # 10000c <cipher>
+ 9d0:	4398                	lw	a4,0(a5)
+ 9d2:	67c1                	lui	a5,0x10
+ 9d4:	00f71463          	bne	a4,a5,9dc <cipher_is_valid+0x1a>
+ 9d8:	4785                	li	a5,1
+ 9da:	a011                	j	9de <cipher_is_valid+0x1c>
+ 9dc:	4781                	li	a5,0
+ 9de:	853e                	mv	a0,a5
+ 9e0:	4432                	lw	s0,12(sp)
+ 9e2:	0141                	add	sp,sp,16
+ 9e4:	8082                	ret
+
+000009e6 <cipher_is_busy>:
+ 9e6:	1141                	add	sp,sp,-16
+ 9e8:	c622                	sw	s0,12(sp)
+ 9ea:	0800                	add	s0,sp,16
+ 9ec:	001007b7          	lui	a5,0x100
+ 9f0:	00c7a783          	lw	a5,12(a5) # 10000c <cipher>
+ 9f4:	4398                	lw	a4,0(a5)
+ 9f6:	010007b7          	lui	a5,0x1000
+ 9fa:	00f71463          	bne	a4,a5,a02 <cipher_is_busy+0x1c>
+ 9fe:	4785                	li	a5,1
+ a00:	a011                	j	a04 <cipher_is_busy+0x1e>
+ a02:	4781                	li	a5,0
+ a04:	853e                	mv	a0,a5
+ a06:	4432                	lw	s0,12(sp)
+ a08:	0141                	add	sp,sp,16
+ a0a:	8082                	ret
+
+00000a0c <default_exception_handler_c>:
+ a0c:	1141                	add	sp,sp,-16
+ a0e:	c622                	sw	s0,12(sp)
+ a10:	0800                	add	s0,sp,16
+ a12:	a001                	j	a12 <default_exception_handler_c+0x6>
+
+00000a14 <illegal_insn_handler_c>:
+ a14:	1141                	add	sp,sp,-16
+ a16:	c622                	sw	s0,12(sp)
+ a18:	0800                	add	s0,sp,16
+ a1a:	a001                	j	a1a <illegal_insn_handler_c+0x6>
+
+00000a1c <ecall_insn_handler_c>:
+ a1c:	1141                	add	sp,sp,-16
+ a1e:	c622                	sw	s0,12(sp)
+ a20:	0800                	add	s0,sp,16
+ a22:	a001                	j	a22 <ecall_insn_handler_c+0x6>
+
+00000a24 <__CTOR_LIST__>:
 	...
 
-00000926 <__CTOR_END__>:
+00000a2c <__CTOR_END__>:
 	...
 
 Disassembly of section .text.__libc_init_array:
 
-00000930 <__libc_init_array>:
- 930:	ff010113          	add	sp,sp,-16
- 934:	00812423          	sw	s0,8(sp)
- 938:	001007b7          	lui	a5,0x100
- 93c:	00100437          	lui	s0,0x100
- 940:	01212023          	sw	s2,0(sp)
- 944:	00078793          	mv	a5,a5
- 948:	00040713          	mv	a4,s0
- 94c:	00112623          	sw	ra,12(sp)
- 950:	00912223          	sw	s1,4(sp)
- 954:	40e78933          	sub	s2,a5,a4
- 958:	02e78263          	beq	a5,a4,97c <__libc_init_array+0x4c>
- 95c:	40295913          	sra	s2,s2,0x2
- 960:	00040413          	mv	s0,s0
- 964:	00000493          	li	s1,0
- 968:	00042783          	lw	a5,0(s0) # 100000 <__init_array_end>
- 96c:	00148493          	add	s1,s1,1
- 970:	00440413          	add	s0,s0,4
- 974:	000780e7          	jalr	a5 # 100000 <__init_array_end>
- 978:	ff24e8e3          	bltu	s1,s2,968 <__libc_init_array+0x38>
- 97c:	00100437          	lui	s0,0x100
- 980:	001007b7          	lui	a5,0x100
- 984:	00078793          	mv	a5,a5
- 988:	00040713          	mv	a4,s0
- 98c:	40e78933          	sub	s2,a5,a4
- 990:	40295913          	sra	s2,s2,0x2
- 994:	02e78063          	beq	a5,a4,9b4 <__libc_init_array+0x84>
- 998:	00040413          	mv	s0,s0
- 99c:	00000493          	li	s1,0
- 9a0:	00042783          	lw	a5,0(s0) # 100000 <__init_array_end>
- 9a4:	00148493          	add	s1,s1,1
- 9a8:	00440413          	add	s0,s0,4
- 9ac:	000780e7          	jalr	a5 # 100000 <__init_array_end>
- 9b0:	ff24e8e3          	bltu	s1,s2,9a0 <__libc_init_array+0x70>
- 9b4:	00c12083          	lw	ra,12(sp)
- 9b8:	00812403          	lw	s0,8(sp)
- 9bc:	00412483          	lw	s1,4(sp)
- 9c0:	00012903          	lw	s2,0(sp)
- 9c4:	01010113          	add	sp,sp,16
- 9c8:	00008067          	ret
+00000a34 <__libc_init_array>:
+ a34:	ff010113          	add	sp,sp,-16
+ a38:	00812423          	sw	s0,8(sp)
+ a3c:	001007b7          	lui	a5,0x100
+ a40:	00100437          	lui	s0,0x100
+ a44:	01212023          	sw	s2,0(sp)
+ a48:	00078793          	mv	a5,a5
+ a4c:	00040713          	mv	a4,s0
+ a50:	00112623          	sw	ra,12(sp)
+ a54:	00912223          	sw	s1,4(sp)
+ a58:	40e78933          	sub	s2,a5,a4
+ a5c:	02e78263          	beq	a5,a4,a80 <__libc_init_array+0x4c>
+ a60:	40295913          	sra	s2,s2,0x2
+ a64:	00040413          	mv	s0,s0
+ a68:	00000493          	li	s1,0
+ a6c:	00042783          	lw	a5,0(s0) # 100000 <__init_array_end>
+ a70:	00148493          	add	s1,s1,1
+ a74:	00440413          	add	s0,s0,4
+ a78:	000780e7          	jalr	a5 # 100000 <__init_array_end>
+ a7c:	ff24e8e3          	bltu	s1,s2,a6c <__libc_init_array+0x38>
+ a80:	00100437          	lui	s0,0x100
+ a84:	001007b7          	lui	a5,0x100
+ a88:	00078793          	mv	a5,a5
+ a8c:	00040713          	mv	a4,s0
+ a90:	40e78933          	sub	s2,a5,a4
+ a94:	40295913          	sra	s2,s2,0x2
+ a98:	02e78063          	beq	a5,a4,ab8 <__libc_init_array+0x84>
+ a9c:	00040413          	mv	s0,s0
+ aa0:	00000493          	li	s1,0
+ aa4:	00042783          	lw	a5,0(s0) # 100000 <__init_array_end>
+ aa8:	00148493          	add	s1,s1,1
+ aac:	00440413          	add	s0,s0,4
+ ab0:	000780e7          	jalr	a5 # 100000 <__init_array_end>
+ ab4:	ff24e8e3          	bltu	s1,s2,aa4 <__libc_init_array+0x70>
+ ab8:	00c12083          	lw	ra,12(sp)
+ abc:	00812403          	lw	s0,8(sp)
+ ac0:	00412483          	lw	s1,4(sp)
+ ac4:	00012903          	lw	s2,0(sp)
+ ac8:	01010113          	add	sp,sp,16
+ acc:	00008067          	ret
 
 Disassembly of section .rodata:
 
@@ -1022,6 +1112,12 @@ Disassembly of section .rodata:
 Disassembly of section .shbss:
 
 0010000b <.shbss>:
+	...
+
+Disassembly of section .bss:
+
+0010000c <cipher>:
+  10000c:	0000                	.2byte	0x0
 	...
 
 Disassembly of section .stack:
