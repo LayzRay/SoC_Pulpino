@@ -1,0 +1,651 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:39:14 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 1596982
+License: Customer
+
+Current time: 	Thu Apr 20 10:58:01 UTC 2023
+Time zone: 	Coordinated Universal Time (Etc/UTC)
+
+OS: Ubuntu
+OS Version: 5.15.74-1-pve
+OS Architecture: amd64
+Available processors (cores): 32
+
+Display: :68.0
+Screen size: 1536x864
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 425 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/tools/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4
+Java executable location: 	/tools/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	student_28
+User home directory: /home/student_28
+User working directory: /home/student_28/Files/Lab_4/pulpino_students
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2019.2
+RDI_DATADIR: /tools/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: /home/student_28/.Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: /home/student_28/.Xilinx/Vivado/2019.2/
+Vivado layouts directory: /home/student_28/.Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	/tools/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/student_28/Files/Lab_4/pulpino_students/vivado.log
+Vivado journal file location: 	/home/student_28/Files/Lab_4/pulpino_students/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-1596982-students-ct
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /tools/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: /tools/Xilinx/vivado2018+IPs.lic
+XILINX_DSP: /tools/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2019.2
+XILINX_VITIS: 
+XILINX_VIVADO: /tools/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	215 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,070 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/student_28/Files/Lab_4/pulpino_students/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.xpr", 0); // r (O, cr)
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: /home/student_28/Files/Lab_4/pulpino_students/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /home/student_28/Files/Lab_4/pulpino_students/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 112 MB (+115035kb) [00:00:07]
+// [Engine Memory]: 1,097 MB (+999074kb) [00:00:07]
+// WARNING: HEventQueue.dispatchEvent() is taking  1630 ms.
+// Tcl Message: open_project /home/student_28/Files/Lab_4/pulpino_students/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,088 MB. GUI used memory: 50 MB. Current time: 4/20/23, 10:58:03 AM UTC
+// Project name: pulpino_nexys_a7_100t; location: /home/student_28/Files/Lab_4/pulpino_students/pulpino_nexys_a7_100t; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bB (cr)
+// Tcl Message: update_compile_order -fileset sources_1 
+// RDIResource.RDIViews_PROPERTIES: Properties: close view
+// PAResourceOtoP.PAViews_PROJECT_SUMMARY: Project Summary: close view
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+selectButton(PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, (String) null); // E (H, cr)
+// Run Command: PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV
+// Elapsed time: 66 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, kuznechik_cipher_apb_wrapper (kuznechik_cipher_apb_wrapper.sv)]", 7); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, kuznechik_cipher_apb_wrapper (kuznechik_cipher_apb_wrapper.sv), cipher : kuznechik_cipher (kuznechik_cipher.sv)]", 8, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, kuznechik_cipher_apb_wrapper (kuznechik_cipher_apb_wrapper.sv), cipher : kuznechik_cipher (kuznechik_cipher.sv)]", 8, false, false, false, false, false, true); // B (F, cr) - Double Click
+// [Engine Memory]: 1,170 MB (+18468kb) [00:01:25]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,144 MB. GUI used memory: 52 MB. Current time: 4/20/23, 10:59:23 AM UTC
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, kuznechik_cipher_apb_wrapper (kuznechik_cipher_apb_wrapper.sv)]", 7, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, kuznechik_cipher_apb_wrapper (kuznechik_cipher_apb_wrapper.sv)]", 7, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectCodeEditor("kuznechik_cipher_apb_wrapper.sv", 166, 284); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv)]", 6, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv)]", 6, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), clk_gen : xilinx_mmcm (xilinx_mmcm.xci)]", 7, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv)]", 8, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv)]", 8, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), clk_gen : xilinx_mmcm (xilinx_mmcm.xci)]", 7, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), clk_gen : xilinx_mmcm (xilinx_mmcm.xci)]", 7, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// TclEventType: LOAD_FEATURE
+// O (cr):  Re-customize IP : addNotify
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (O)
+// [Engine Memory]: 1,320 MB (+96079kb) [00:01:48]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,320 MB. GUI used memory: 64 MB. Current time: 4/20/23, 10:59:44 AM UTC
+dismissDialog("Re-customize IP"); // O (cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), clk_gen : xilinx_mmcm (xilinx_mmcm.xci)]", 7); // B (F, cr)
+// A (cr): Show IP Hierarchy: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (A)
+dismissDialog("Show IP Hierarchy"); // A (cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv)]", 8); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), clk_rst_gen_i : clk_rst_gen (clk_rst_gen.sv)]", 9, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), clk_rst_gen_i : clk_rst_gen (clk_rst_gen.sv)]", 9, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// Elapsed time: 194 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), clk_rst_gen_i : clk_rst_gen (clk_rst_gen.sv)]", 9); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv)]", 11); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv), axi_spi_slave_i : axi_spi_slave_wrap (axi_spi_slave_wrap.sv)]", 12, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv), axi2apb_i : axi2apb_wrap (axi2apb_wrap.sv)]", 13, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv), periph_bus_i : periph_bus_wrap (periph_bus_wrap.sv)]", 14, true); // B (F, cr) - Node
+// Elapsed time: 13 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv)]", 6); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv)]", 6); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), clk_rst_gen_i : clk_rst_gen (clk_rst_gen.sv)]", 9); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), clk_rst_gen_i : clk_rst_gen (clk_rst_gen.sv)]", 9); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), core_region_i : core_region (core_region.sv)]", 10); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), core_region_i : core_region (core_region.sv)]", 10); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv), axi_spi_slave_i : axi_spi_slave_wrap (axi_spi_slave_wrap.sv)]", 12); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv), axi_spi_slave_i : axi_spi_slave_wrap (axi_spi_slave_wrap.sv)]", 12); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv), axi2apb_i : axi2apb_wrap (axi2apb_wrap.sv)]", 13); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv), axi2apb_i : axi2apb_wrap (axi2apb_wrap.sv)]", 13); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv), apb_uart_i : apb_uart(rtl) (apb_uart.vhd)]", 15); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv), apb_uart_i : apb_uart(rtl) (apb_uart.vhd)]", 15); // B (F, cr)
+// [GUI Memory]: 118 MB (+598kb) [00:05:49]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv), periph_bus_i : periph_bus_wrap (periph_bus_wrap.sv)]", 14); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv), periph_bus_i : periph_bus_wrap (periph_bus_wrap.sv)]", 14); // B (F, cr)
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), axi_interconnect_i : axi_node_intf_wrap (axi_node_intf_wrap.sv)]", 32, true); // B (F, cr) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), axi_interconnect_i : axi_node_intf_wrap (axi_node_intf_wrap.sv)]", 32); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), axi_interconnect_i : axi_node_intf_wrap (axi_node_intf_wrap.sv), axi_node_i : axi_node (axi_node.sv)]", 33); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, kuznechik_cipher_apb_wrapper (kuznechik_cipher_apb_wrapper.sv)]", 40); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), clk_gen : xilinx_mmcm (xilinx_mmcm.xci)]", 7); // B (F, cr)
+// A (cr): Show IP Hierarchy: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (A)
+dismissDialog("Show IP Hierarchy"); // A (cr)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// PAResourceOtoP.PAViews_CODE: Code: close view
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv)]", 8); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), clk_rst_gen_i : clk_rst_gen (clk_rst_gen.sv)]", 9, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), core_region_i : core_region (core_region.sv)]", 10, true); // B (F, cr) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv)]", 11); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv), apb_uart_i : apb_uart(rtl) (apb_uart.vhd)]", 15); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv), apb_uart_i : apb_uart(rtl) (apb_uart.vhd)]", 15); // B (F, cr)
+// Elapsed time: 20 seconds
+selectButton(RDIResource.AbstractSearchablePanel_SHOW_SEARCH, "Sources_search"); // x (f, cr): TRUE
+setText("PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE_SEARCH_FIELD", "apb_bus"); // OverlayTextField (C, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, apb_bus.sv]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, apb_bus.sv]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 160 seconds
+selectCodeEditor("apb_bus.sv", 238, 230); // ch (w, cr)
+// Elapsed time: 47 seconds
+selectCodeEditor("apb_bus.sv", 307, 245); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 108 seconds
+selectCodeEditor("apb_bus.sv", 251, 94); // ch (w, cr)
+selectCodeEditor("apb_bus.sv", 106, 258); // ch (w, cr)
+selectCodeEditor("apb_bus.sv", 152, 259); // ch (w, cr)
+selectCodeEditor("apb_bus.sv", 10, 288); // ch (w, cr)
+selectCodeEditor("apb_bus.sv", 34, 353); // ch (w, cr)
+selectCodeEditor("apb_bus.sv", 49, 408); // ch (w, cr)
+selectCodeEditor("apb_bus.sv", 48, 474); // ch (w, cr)
+selectCodeEditor("apb_bus.sv", 125, 402); // ch (w, cr)
+selectCodeEditor("apb_bus.sv", 114, 460); // ch (w, cr)
+selectCodeEditor("apb_bus.sv", 112, 520); // ch (w, cr)
+selectCodeEditor("apb_bus.sv", 111, 494); // ch (w, cr)
+selectCodeEditor("apb_bus.sv", 109, 541); // ch (w, cr)
+selectCodeEditor("apb_bus.sv", 107, 467); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("apb_bus.sv", 285, 204); // ch (w, cr)
+selectCodeEditor("apb_bus.sv", 263, 183); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,340 MB. GUI used memory: 66 MB. Current time: 4/20/23, 11:10:43 AM UTC
+// Elapsed time: 37 seconds
+setText("PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE_SEARCH_FIELD", "periph_bus_wrap"); // OverlayTextField (C, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv), periph_bus_i : periph_bus_wrap (periph_bus_wrap.sv)]", 4, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv), periph_bus_i : periph_bus_wrap (periph_bus_wrap.sv)]", 4, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectCodeEditor("periph_bus_wrap.sv", 193, 281); // ch (w, cr)
+// WARNING: HEventQueue.dispatchEvent() is taking  2935 ms.
+// Elapsed time: 35 seconds
+selectCodeEditor("periph_bus_wrap.sv", 166, 366); // ch (w, cr)
+selectCodeEditor("periph_bus_wrap.sv", 268, 282); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  3016 ms.
+// [GUI Memory]: 125 MB (+776kb) [00:14:33]
+// Elapsed time: 39 seconds
+selectCodeEditor("periph_bus_wrap.sv", 249, 296); // ch (w, cr)
+// Elapsed time: 35 seconds
+selectCodeEditor("periph_bus_wrap.sv", 239, 284); // ch (w, cr)
+selectCodeEditor("periph_bus_wrap.sv", 244, 291); // ch (w, cr)
+selectCodeEditor("periph_bus_wrap.sv", 239, 295); // ch (w, cr)
+typeControlKey((HResource) null, "periph_bus_wrap.sv", 'c'); // ch (w, cr)
+selectCodeEditor("periph_bus_wrap.sv", 247, 306); // ch (w, cr)
+selectCodeEditor("periph_bus_wrap.sv", 30, 291); // ch (w, cr)
+selectCodeEditor("periph_bus_wrap.sv", 255, 305); // ch (w, cr)
+typeControlKey((HResource) null, "periph_bus_wrap.sv", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("periph_bus_wrap.sv", 227, 176); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,372 MB. GUI used memory: 67 MB. Current time: 4/20/23, 11:13:33 AM UTC
+selectCodeEditor("periph_bus_wrap.sv", 236, 221); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  2275 ms.
+// [Engine Memory]: 1,388 MB (+2469kb) [00:15:43]
+// Elapsed time: 20 seconds
+selectCodeEditor("periph_bus_wrap.sv", 309, 388); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  2617 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,405 MB. GUI used memory: 66 MB. Current time: 4/20/23, 11:15:23 AM UTC
+// Elapsed time: 162 seconds
+setText("PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE_SEARCH_FIELD", "peripherals.sv", true); // OverlayTextField (C, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv)]", 3, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pulpino_nexys_a7 (pulpino_nexys_a7.sv), pulpino_inst : pulpino_top (pulpino_top.sv), peripherals_i : peripherals (peripherals.sv)]", 3, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// Elapsed time: 23 seconds
+selectCodeEditor("peripherals.sv", 123, 293); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 134, 129); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 225, 145); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  2750 ms.
+// Elapsed time: 18 seconds
+selectCodeEditor("peripherals.sv", 168, 324); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  2375 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,437 MB. GUI used memory: 67 MB. Current time: 4/20/23, 11:17:48 AM UTC
+// Elapsed time: 80 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, kuznechik_cipher_apb_wrapper (kuznechik_cipher_apb_wrapper.sv), cipher : kuznechik_cipher (kuznechik_cipher.sv)]", 16, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, kuznechik_cipher_apb_wrapper (kuznechik_cipher_apb_wrapper.sv), cipher : kuznechik_cipher (kuznechik_cipher.sv)]", 16, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, kuznechik_cipher_apb_wrapper (kuznechik_cipher_apb_wrapper.sv)]", 15, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, kuznechik_cipher_apb_wrapper (kuznechik_cipher_apb_wrapper.sv)]", 15, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// Elapsed time: 17 seconds
+selectCodeEditor("kuznechik_cipher_apb_wrapper.sv", 52, 9); // ch (w, cr)
+typeControlKey((HResource) null, "kuznechik_cipher_apb_wrapper.sv", 'c'); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "kuznechik_cipher.sv", 1); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "peripherals.sv", 0); // i (h, cr)
+// Elapsed time: 16 seconds
+selectCodeEditor("peripherals.sv", 117, 130); // ch (w, cr)
+// Elapsed time: 21 seconds
+selectCodeEditor("peripherals.sv", 14, 219); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'c'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 79, 539); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 479, 534); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 209, 544); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 108, 507); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 242, 502); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 163, 503); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 121, 503); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectCodeEditor("peripherals.sv", 429, 503); // ch (w, cr)
+// [Engine Memory]: 1,485 MB (+28368kb) [00:22:46]
+selectCodeEditor("peripherals.sv", 485, 529); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,485 MB. GUI used memory: 68 MB. Current time: 4/20/23, 11:20:43 AM UTC
+selectCodeEditor("peripherals.sv", 446, 504); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("peripherals.sv", 464, 539); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 461, 551); // ch (w, cr)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "kuznechik_cipher_apb_wrapper.sv", 2); // i (h, cr)
+typeControlKey((HResource) null, "kuznechik_cipher_apb_wrapper.sv", 'c'); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "peripherals.sv", 0); // i (h, cr)
+selectCodeEditor("peripherals.sv", 43, 541); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 32, 530); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 24, 520); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  2881 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,515 MB. GUI used memory: 68 MB. Current time: 4/20/23, 11:21:26 AM UTC
+// Elapsed time: 41 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "kuznechik_cipher_apb_wrapper.sv", 2); // i (h, cr)
+selectCodeEditor("kuznechik_cipher_apb_wrapper.sv", 8, 33); // ch (w, cr)
+selectCodeEditor("kuznechik_cipher_apb_wrapper.sv", 1, 20); // ch (w, cr)
+selectCodeEditor("kuznechik_cipher_apb_wrapper.sv", 0, 21); // ch (w, cr)
+typeControlKey((HResource) null, "kuznechik_cipher_apb_wrapper.sv", 'c'); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "peripherals.sv", 0); // i (h, cr)
+selectCodeEditor("peripherals.sv", 250, 518); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 9, 460); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'c'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 201, 379); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 75, 408); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 88, 412); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 55, 415); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 86, 415); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 139, 278); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 138, 279); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 132, 279); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 146, 272); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 89, 292); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 83, 290); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 83, 293); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 135, 293); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("peripherals.sv", 113, 346); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 61, 336); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("peripherals.sv", 12, 325); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'c'); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,548 MB. GUI used memory: 68 MB. Current time: 4/20/23, 11:22:58 AM UTC
+selectCodeEditor("peripherals.sv", 18, 367); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 19, 367); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 14, 372); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 12, 382); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 15, 398); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 15, 412); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 80, 415); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 19, 412); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 16, 414, false, true, false, false, false); // ch (w, cr) - Control Key
+selectCodeEditor("peripherals.sv", 17, 414, false, true, false, false, false); // ch (w, cr) - Control Key
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 166, 461); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("peripherals.sv", 55, 368); // ch (w, cr)
+// [Engine Memory]: 1,565 MB (+6011kb) [00:25:32]
+selectCodeEditor("peripherals.sv", 114, 462); // ch (w, cr)
+// Elapsed time: 14 seconds
+selectCodeEditor("peripherals.sv", 183, 83); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 176, 86); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 110, 461); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 116, 506); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 113, 460); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 116, 464); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'c'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 121, 458); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 134, 458); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 120, 458, false, true, false, false, false); // ch (w, cr) - Control Key
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 122, 445); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 126, 451); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 122, 442); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 122, 441, false, true, false, false, false); // ch (w, cr) - Control Key
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 154, 405); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("peripherals.sv", 113, 398); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 115, 491); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,581 MB. GUI used memory: 68 MB. Current time: 4/20/23, 11:24:23 AM UTC
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("peripherals.sv", 195, 453); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 68, 373); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 136, 362); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 142, 385); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 143, 400); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 135, 412); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 135, 412, false, true, false, false, false); // ch (w, cr) - Control Key
+selectCodeEditor("peripherals.sv", 148, 496); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 138, 474); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 138, 472, false, true, false, false, false); // ch (w, cr) - Control Key
+selectCodeEditor("peripherals.sv", 143, 505); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("peripherals.sv", 113, 488); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,606 MB. GUI used memory: 68 MB. Current time: 4/20/23, 11:24:53 AM UTC
+selectCodeEditor("peripherals.sv", 123, 470); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("peripherals.sv", 135, 422); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 95, 448); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 110, 429); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 155, 429); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 103, 400); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 68, 383); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 61, 365); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 176, 406); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("peripherals.sv", 105, 431); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 114, 440); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 120, 458); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,630 MB. GUI used memory: 68 MB. Current time: 4/20/23, 11:25:23 AM UTC
+selectCodeEditor("peripherals.sv", 232, 462); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 115, 458); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 114, 473); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 116, 487); // ch (w, cr)
+typeControlKey(null, null, 'z');
+selectCodeEditor("peripherals.sv", 113, 487); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 114, 446); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 109, 424); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 114, 406); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 111, 394); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 108, 380); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 109, 370); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 101, 368); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 188, 438); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,647 MB (+3652kb) [00:27:42]
+selectCodeEditor("peripherals.sv", 64, 142); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 47, 160); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 72, 145); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'c'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 49, 531); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("peripherals.sv", 25, 487); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,671 MB. GUI used memory: 68 MB. Current time: 4/20/23, 11:25:53 AM UTC
+// Elapsed time: 17 seconds
+selectCodeEditor("peripherals.sv", 118, 180); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 127, 350); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 128, 355); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 209, 353); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 184, 382); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("peripherals.sv", 234, 81); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'c'); // ch (w, cr)
+// Elapsed time: 11 seconds
+selectCodeEditor("peripherals.sv", 98, 391); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 128, 370); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 129, 374); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 175, 372); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,696 MB. GUI used memory: 68 MB. Current time: 4/20/23, 11:26:58 AM UTC
+// Elapsed time: 23 seconds
+selectCodeEditor("peripherals.sv", 147, 386); // ch (w, cr)
+// Elapsed time: 22 seconds
+selectCodeEditor("peripherals.sv", 129, 385); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 139, 387); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 372, 383); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 225, 374); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 226, 357); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("peripherals.sv", 206, 386); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 177, 384); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 161, 470); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("peripherals.sv", 131, 399); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 125, 401); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,728 MB. GUI used memory: 68 MB. Current time: 4/20/23, 11:27:58 AM UTC
+selectCodeEditor("peripherals.sv", 305, 370); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 306, 350); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 328, 385); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+typeControlKey(null, null, 'z');
+// [Engine Memory]: 1,744 MB (+16127kb) [00:30:10]
+selectCodeEditor("peripherals.sv", 334, 383); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 330, 385); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 336, 362); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 337, 355); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 336, 396); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("peripherals.sv", 136, 413); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 126, 414); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 128, 429); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,760 MB. GUI used memory: 68 MB. Current time: 4/20/23, 11:28:13 AM UTC
+selectCodeEditor("peripherals.sv", 126, 426, false, true, false, false, false); // ch (w, cr) - Control Key
+selectCodeEditor("peripherals.sv", 142, 451); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 127, 428); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 128, 427, false, true, false, false, false); // ch (w, cr) - Control Key
+selectCodeEditor("peripherals.sv", 338, 415); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 334, 447); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("peripherals.sv", 154, 416); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 141, 396); // ch (w, cr)
+// Elapsed time: 38 seconds
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 142, 402); // ch (w, cr)
+// WARNING: HEventQueue.dispatchEvent() is taking  2218 ms.
+// Elapsed time: 11 seconds
+selectCodeEditor("peripherals.sv", 143, 414); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+// WARNING: HEventQueue.dispatchEvent() is taking  1960 ms.
+// Elapsed time: 10 seconds
+selectCodeEditor("peripherals.sv", 142, 428); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+// WARNING: HEventQueue.dispatchEvent() is taking  1614 ms.
+// Elapsed time: 11 seconds
+selectCodeEditor("peripherals.sv", 135, 444); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 145, 444); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 144, 445); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 143, 444); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+// WARNING: HEventQueue.dispatchEvent() is taking  1827 ms.
+// Elapsed time: 11 seconds
+selectCodeEditor("peripherals.sv", 139, 459); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+// WARNING: HEventQueue.dispatchEvent() is taking  1795 ms.
+// Elapsed time: 11 seconds
+selectCodeEditor("peripherals.sv", 140, 472); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+// WARNING: HEventQueue.dispatchEvent() is taking  1427 ms.
+selectCodeEditor("peripherals.sv", 144, 485); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 147, 489); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  2190 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,793 MB. GUI used memory: 68 MB. Current time: 4/20/23, 11:30:28 AM UTC
+// Elapsed time: 24 seconds
+selectCodeEditor("peripherals.sv", 437, 400); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 443, 400); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 335, 410); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 422, 413); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 424, 412, false, true, false, false, false); // ch (w, cr) - Control Key
+// Elapsed time: 12 seconds
+selectCodeEditor("peripherals.sv", 381, 447); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 316, 426); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 335, 443); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 353, 480); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("peripherals.sv", 171, 476); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 236, 404); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 155, 384); // ch (w, cr)
+typeControlKey((HResource) null, "peripherals.sv", 'c'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 169, 396); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 169, 396, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("peripherals.sv", 166, 402); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 176, 399); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 155, 400); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 157, 397, false, true, false, false, false); // ch (w, cr) - Control Key
+typeControlKey((HResource) null, "peripherals.sv", 'v'); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 217, 479); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("peripherals.sv", 293, 441); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 467, 466); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,825 MB. GUI used memory: 68 MB. Current time: 4/20/23, 11:31:33 AM UTC
+selectCodeEditor("peripherals.sv", 352, 396); // ch (w, cr)
+selectCodeEditor("peripherals.sv", 352, 397, false, true, false, false, false); // ch (w, cr) - Control Key
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("peripherals.sv", 384, 471); // ch (w, cr)
+// [Engine Memory]: 1,841 MB (+10082kb) [00:33:48]
+// Elapsed time: 151 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "kuznechik_cipher.sv", 0); // i (h, cr)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// PAResourceOtoP.PAViews_CODE: Code: close view
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+setText("PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE_SEARCH_FIELD", "apb_bus"); // OverlayTextField (C, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, apb_bus.sv]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, apb_bus.sv]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("apb_bus.sv", 162, 164); // ch (w, cr)
+// WARNING: HEventQueue.dispatchEvent() is taking  2637 ms.
+// Elapsed time: 28 seconds
+selectCodeEditor("apb_bus.sv", 146, 370); // ch (w, cr)
+// Elapsed time: 65 seconds
+setText("PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE_SEARCH_FIELD", (String) null); // OverlayTextField (C, cr)
+// Elapsed time: 131 seconds
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 2); // i (N, cr)
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, slib_input_sync.vhd]", 171, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, slib_input_sync.vhd]", 171, false, false, false, false, false, true); // B (F, cr) - Double Click
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, Unreferenced]", 18); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, Unreferenced]", 18); // B (F, cr)
+// Elapsed time: 14 seconds
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i (N, cr)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i (N, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 3); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 3); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog]", 2); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog]", 2); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Global Include]", 1); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Global Include]", 1); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 7); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 7); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 57, true); // B (F, cr) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Data Files]", 56); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 70); // B (F, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,814 MB. GUI used memory: 64 MB. Current time: 4/20/23, 12:01:33 PM UTC
+// Elapsed time: 1785 seconds
+selectCodeEditor("apb_bus.sv", 412, 66); // ch (w, cr)
+selectButton(PAResourceOtoP.PlanAheadTab_SHOW_FLOW_NAVIGATOR, "Flow Navigator"); // C (N, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (f)
+dismissDialog("Launch Runs"); // f (cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cr): Launch Runs: addNotify
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
