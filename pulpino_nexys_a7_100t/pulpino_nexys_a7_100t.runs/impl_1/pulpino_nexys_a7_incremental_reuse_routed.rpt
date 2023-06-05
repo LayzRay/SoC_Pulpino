@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue May 23 20:52:35 2023
+| Date         : Fri Jun  2 11:25:58 2023
 | Host         : students-ct running 64-bit Ubuntu 22.04.2 LTS
 | Command      : report_incremental_reuse -file pulpino_nexys_a7_incremental_reuse_routed.rpt
 | Design       : pulpino_nexys_a7
@@ -25,7 +25,7 @@ Table of Contents
 |  Type | Matched % (of Total) | Reuse % (of Total) | Fixed % (of Total) | Total |
 +-------+----------------------+--------------------+--------------------+-------+
 | Cells |               100.00 |             100.00 |               0.20 | 21596 |
-| Nets  |               100.00 |              99.99 |               0.00 | 17343 |
+| Nets  |               100.00 |             100.00 |               0.00 | 16118 |
 | Pins  |                    - |             100.00 |                  - | 96371 |
 | Ports |               100.00 |             100.00 |             100.00 |    44 |
 +-------+----------------------+--------------------+--------------------+-------+
@@ -60,12 +60,12 @@ Table of Contents
 +-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
 |      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
 +-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
-| synth_design    |             |             |       00:04 |       00:04 |       00:04 |       00:03 |
+| synth_design    |             |             |       00:04 |       00:04 |       00:03 |       00:04 |
 | opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
 | read_checkpoint |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
-| place_design    |       1.215 |       1.276 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| place_design    |       1.276 |       1.276 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
 | phys_opt_design |             |             |             |             |             |             |
-| route_design    |       1.276 |       1.276 |     < 1 min |     < 1 min |       00:01 |       00:01 |
+| route_design    |       1.276 |       1.276 |     < 1 min |     < 1 min |       00:01 |     < 1 min |
 +-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------------------+------+
 | Non-Reused Cells      | 0.00 |
 | Partially reused nets | 0.00 |
-| Non-Reused nets       | 0.01 |
+| Non-Reused nets       | 0.00 |
 | Non-Reused Ports      | 0.00 |
 +-----------------------+------+
 

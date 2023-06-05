@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="pulpino_nexys_a7_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="pulpino_nexys_a7_tb" />
+            <top_module name="riscv_defines" />
+            <top_module name="zeroriscy_defines" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="8840000001fs"></ZoomEndTime>
+      <Cursor1Time time="3506545000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="126"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="74" />
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/uart_rxd_out">
+      <obj_property name="ElementShortName">uart_rxd_out</obj_property>
+      <obj_property name="ObjectShortName">uart_rxd_out</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/uart_txd_in">
+      <obj_property name="ElementShortName">uart_txd_in</obj_property>
+      <obj_property name="ObjectShortName">uart_txd_in</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/apb_uart_i/iTSR">
+      <obj_property name="ElementShortName">iTSR[7:0]</obj_property>
+      <obj_property name="ObjectShortName">iTSR[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/clk_i">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/rstn_i">
+      <obj_property name="ElementShortName">rstn_i</obj_property>
+      <obj_property name="ObjectShortName">rstn_i</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_paddr_i">
+      <obj_property name="ElementShortName">apb_paddr_i[11:0]</obj_property>
+      <obj_property name="ObjectShortName">apb_paddr_i[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_pwdata_i">
+      <obj_property name="ElementShortName">apb_pwdata_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">apb_pwdata_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_pwrite_i">
+      <obj_property name="ElementShortName">apb_pwrite_i</obj_property>
+      <obj_property name="ObjectShortName">apb_pwrite_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_psel_i">
+      <obj_property name="ElementShortName">apb_psel_i</obj_property>
+      <obj_property name="ObjectShortName">apb_psel_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_penable_i">
+      <obj_property name="ElementShortName">apb_penable_i</obj_property>
+      <obj_property name="ObjectShortName">apb_penable_i</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_prdata_o">
+      <obj_property name="ElementShortName">apb_prdata_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">apb_prdata_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_pready_o">
+      <obj_property name="ElementShortName">apb_pready_o</obj_property>
+      <obj_property name="ObjectShortName">apb_pready_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_pslverr_o">
+      <obj_property name="ElementShortName">apb_pslverr_o</obj_property>
+      <obj_property name="ObjectShortName">apb_pslverr_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_write">
+      <obj_property name="ElementShortName">apb_write</obj_property>
+      <obj_property name="ObjectShortName">apb_write</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_read">
+      <obj_property name="ElementShortName">apb_read</obj_property>
+      <obj_property name="ObjectShortName">apb_read</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_sel_rst">
+      <obj_property name="ElementShortName">apb_sel_rst</obj_property>
+      <obj_property name="ObjectShortName">apb_sel_rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_sel_req">
+      <obj_property name="ElementShortName">apb_sel_req</obj_property>
+      <obj_property name="ObjectShortName">apb_sel_req</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_sel_ack">
+      <obj_property name="ElementShortName">apb_sel_ack</obj_property>
+      <obj_property name="ObjectShortName">apb_sel_ack</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_sel_valid">
+      <obj_property name="ElementShortName">apb_sel_valid</obj_property>
+      <obj_property name="ObjectShortName">apb_sel_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_sel_busy">
+      <obj_property name="ElementShortName">apb_sel_busy</obj_property>
+      <obj_property name="ObjectShortName">apb_sel_busy</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_sel_data_in_0">
+      <obj_property name="ElementShortName">apb_sel_data_in_0</obj_property>
+      <obj_property name="ObjectShortName">apb_sel_data_in_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_sel_data_in_1">
+      <obj_property name="ElementShortName">apb_sel_data_in_1</obj_property>
+      <obj_property name="ObjectShortName">apb_sel_data_in_1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_sel_data_in_2">
+      <obj_property name="ElementShortName">apb_sel_data_in_2</obj_property>
+      <obj_property name="ObjectShortName">apb_sel_data_in_2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_sel_data_in_3">
+      <obj_property name="ElementShortName">apb_sel_data_in_3</obj_property>
+      <obj_property name="ObjectShortName">apb_sel_data_in_3</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_sel_data_out_0">
+      <obj_property name="ElementShortName">apb_sel_data_out_0</obj_property>
+      <obj_property name="ObjectShortName">apb_sel_data_out_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_sel_data_out_1">
+      <obj_property name="ElementShortName">apb_sel_data_out_1</obj_property>
+      <obj_property name="ObjectShortName">apb_sel_data_out_1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_sel_data_out_2">
+      <obj_property name="ElementShortName">apb_sel_data_out_2</obj_property>
+      <obj_property name="ObjectShortName">apb_sel_data_out_2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_sel_data_out_3">
+      <obj_property name="ElementShortName">apb_sel_data_out_3</obj_property>
+      <obj_property name="ObjectShortName">apb_sel_data_out_3</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/cipher_rstn">
+      <obj_property name="ElementShortName">cipher_rstn</obj_property>
+      <obj_property name="ObjectShortName">cipher_rstn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/regs2cipher_req">
+      <obj_property name="ElementShortName">regs2cipher_req</obj_property>
+      <obj_property name="ObjectShortName">regs2cipher_req</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/regs2cipher_ack">
+      <obj_property name="ElementShortName">regs2cipher_ack</obj_property>
+      <obj_property name="ObjectShortName">regs2cipher_ack</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/regs2cipher_data_in">
+      <obj_property name="ElementShortName">regs2cipher_data_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">regs2cipher_data_in[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/cipher2regs_busy">
+      <obj_property name="ElementShortName">cipher2regs_busy</obj_property>
+      <obj_property name="ObjectShortName">cipher2regs_busy</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/cipher2regs_valid">
+      <obj_property name="ElementShortName">cipher2regs_valid</obj_property>
+      <obj_property name="ObjectShortName">cipher2regs_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/cipher2regs_data_out">
+      <obj_property name="ElementShortName">cipher2regs_data_out[127:0]</obj_property>
+      <obj_property name="ObjectShortName">cipher2regs_data_out[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/ctrl_rst_ff">
+      <obj_property name="ElementShortName">ctrl_rst_ff</obj_property>
+      <obj_property name="ObjectShortName">ctrl_rst_ff</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/ctrl_rst_en">
+      <obj_property name="ElementShortName">ctrl_rst_en</obj_property>
+      <obj_property name="ObjectShortName">ctrl_rst_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/ctrl_rst_next">
+      <obj_property name="ElementShortName">ctrl_rst_next</obj_property>
+      <obj_property name="ObjectShortName">ctrl_rst_next</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/ctrl_req_ff">
+      <obj_property name="ElementShortName">ctrl_req_ff</obj_property>
+      <obj_property name="ObjectShortName">ctrl_req_ff</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/ctrl_req_en">
+      <obj_property name="ElementShortName">ctrl_req_en</obj_property>
+      <obj_property name="ObjectShortName">ctrl_req_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/ctrl_req_next">
+      <obj_property name="ElementShortName">ctrl_req_next</obj_property>
+      <obj_property name="ObjectShortName">ctrl_req_next</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/ctrl_ack_ff">
+      <obj_property name="ElementShortName">ctrl_ack_ff</obj_property>
+      <obj_property name="ObjectShortName">ctrl_ack_ff</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/ctrl_ack_en">
+      <obj_property name="ElementShortName">ctrl_ack_en</obj_property>
+      <obj_property name="ObjectShortName">ctrl_ack_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/ctrl_ack_next">
+      <obj_property name="ElementShortName">ctrl_ack_next</obj_property>
+      <obj_property name="ObjectShortName">ctrl_ack_next</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/data_in_0_ff">
+      <obj_property name="ElementShortName">data_in_0_ff[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in_0_ff[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/data_in_0_next">
+      <obj_property name="ElementShortName">data_in_0_next[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in_0_next[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/data_in_0_en">
+      <obj_property name="ElementShortName">data_in_0_en</obj_property>
+      <obj_property name="ObjectShortName">data_in_0_en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/data_in_1_ff">
+      <obj_property name="ElementShortName">data_in_1_ff[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in_1_ff[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/data_in_1_next">
+      <obj_property name="ElementShortName">data_in_1_next[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in_1_next[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/data_in_1_en">
+      <obj_property name="ElementShortName">data_in_1_en</obj_property>
+      <obj_property name="ObjectShortName">data_in_1_en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/data_in_2_ff">
+      <obj_property name="ElementShortName">data_in_2_ff[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in_2_ff[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/data_in_2_next">
+      <obj_property name="ElementShortName">data_in_2_next[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in_2_next[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/data_in_2_en">
+      <obj_property name="ElementShortName">data_in_2_en</obj_property>
+      <obj_property name="ObjectShortName">data_in_2_en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/data_in_3_ff">
+      <obj_property name="ElementShortName">data_in_3_ff[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in_3_ff[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/data_in_3_next">
+      <obj_property name="ElementShortName">data_in_3_next[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in_3_next[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/data_in_3_en">
+      <obj_property name="ElementShortName">data_in_3_en</obj_property>
+      <obj_property name="ObjectShortName">data_in_3_en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_dout_ff">
+      <obj_property name="ElementShortName">apb_dout_ff[31:0]</obj_property>
+      <obj_property name="ObjectShortName">apb_dout_ff[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_dout_next">
+      <obj_property name="ElementShortName">apb_dout_next[31:0]</obj_property>
+      <obj_property name="ObjectShortName">apb_dout_next[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_dout_en">
+      <obj_property name="ElementShortName">apb_dout_en</obj_property>
+      <obj_property name="ObjectShortName">apb_dout_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_ready_ff">
+      <obj_property name="ElementShortName">apb_ready_ff</obj_property>
+      <obj_property name="ObjectShortName">apb_ready_ff</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_ready_next">
+      <obj_property name="ElementShortName">apb_ready_next</obj_property>
+      <obj_property name="ObjectShortName">apb_ready_next</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_ready_en">
+      <obj_property name="ElementShortName">apb_ready_en</obj_property>
+      <obj_property name="ObjectShortName">apb_ready_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_err_ff">
+      <obj_property name="ElementShortName">apb_err_ff</obj_property>
+      <obj_property name="ObjectShortName">apb_err_ff</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_err_next">
+      <obj_property name="ElementShortName">apb_err_next</obj_property>
+      <obj_property name="ObjectShortName">apb_err_next</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/apb_err_en">
+      <obj_property name="ElementShortName">apb_err_en</obj_property>
+      <obj_property name="ObjectShortName">apb_err_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/cipher/clk_i">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/cipher/resetn_i">
+      <obj_property name="ElementShortName">resetn_i</obj_property>
+      <obj_property name="ObjectShortName">resetn_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/cipher/request_i">
+      <obj_property name="ElementShortName">request_i</obj_property>
+      <obj_property name="ObjectShortName">request_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/cipher/ack_i">
+      <obj_property name="ElementShortName">ack_i</obj_property>
+      <obj_property name="ObjectShortName">ack_i</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/cipher/data_i">
+      <obj_property name="ElementShortName">data_i[127:0]</obj_property>
+      <obj_property name="ObjectShortName">data_i[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/cipher/busy_o">
+      <obj_property name="ElementShortName">busy_o</obj_property>
+      <obj_property name="ObjectShortName">busy_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/cipher/valid_o">
+      <obj_property name="ElementShortName">valid_o</obj_property>
+      <obj_property name="ObjectShortName">valid_o</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/cipher/data_o">
+      <obj_property name="ElementShortName">data_o[127:0]</obj_property>
+      <obj_property name="ObjectShortName">data_o[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pulpino_nexys_a7_tb/UUT/pulpino_inst/peripherals_i/kuznechik_cipher_apb_wrapper_i/cipher/State">
+      <obj_property name="ElementShortName">State[2:0]</obj_property>
+      <obj_property name="ObjectShortName">State[2:0]</obj_property>
+   </wvobject>
+</wave_config>

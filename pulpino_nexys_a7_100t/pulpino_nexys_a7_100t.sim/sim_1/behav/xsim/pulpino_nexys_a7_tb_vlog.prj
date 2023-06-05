@@ -1,5 +1,5 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib "/home/student_28/Files/Lab_4/pulpino_students/rtl/config.sv" --include "../../../../../rtl" --include "../../../../../rtl/includes" --include "../../../../../submodules/apb/apb_event_unit/include" --include "../../../../../submodules/riscv/include" --include "../../../../../submodules/zero-riscy/include" --include "../../../../pulpino_nexys_a7_100t.srcs/sources_1/ip/xilinx_mmcm" \
+verilog xil_defaultlib "/home/student_28/Files/Pulpino/rtl/config.sv" --include "../../../../../rtl" --include "../../../../../rtl/includes" --include "../../../../../submodules/apb/apb_event_unit/include" --include "../../../../../submodules/riscv/include" --include "../../../../../submodules/zero-riscy/include" --include "../../../../pulpino_nexys_a7_100t.srcs/sources_1/ip/xilinx_mmcm" \
 "../../../../pulpino_nexys_a7_100t.srcs/sources_1/ip/xilinx_mmcm/xilinx_mmcm_clk_wiz.v" \
 "../../../../pulpino_nexys_a7_100t.srcs/sources_1/ip/xilinx_mmcm/xilinx_mmcm.v" \
 "../../../../../submodules/adv_dbg_if/rtl/adbg_crc32.v" \
@@ -12,7 +12,7 @@ verilog xil_defaultlib "/home/student_28/Files/Lab_4/pulpino_students/rtl/config
 "../../../../../submodules/axi/axi_slice_dc/dc_token_ring_fifo_dout.v" \
 "../../../../../rtl/xilinx_spram.v" \
 
-sv xil_defaultlib "/home/student_28/Files/Lab_4/pulpino_students/rtl/config.sv" --include "../../../../../rtl" --include "../../../../../rtl/includes" --include "../../../../../submodules/apb/apb_event_unit/include" --include "../../../../../submodules/riscv/include" --include "../../../../../submodules/zero-riscy/include" --include "../../../../pulpino_nexys_a7_100t.srcs/sources_1/ip/xilinx_mmcm" \
+sv xil_defaultlib "/home/student_28/Files/Pulpino/rtl/config.sv" --include "../../../../../rtl" --include "../../../../../rtl/includes" --include "../../../../../submodules/apb/apb_event_unit/include" --include "../../../../../submodules/riscv/include" --include "../../../../../submodules/zero-riscy/include" --include "../../../../pulpino_nexys_a7_100t.srcs/sources_1/ip/xilinx_mmcm" \
 "../../../../../submodules/adv_dbg_if/rtl/adbg_axi_biu.sv" \
 "../../../../../submodules/adv_dbg_if/rtl/adbg_axi_module.sv" \
 "../../../../../submodules/adv_dbg_if/rtl/adbg_or1k_biu.sv" \

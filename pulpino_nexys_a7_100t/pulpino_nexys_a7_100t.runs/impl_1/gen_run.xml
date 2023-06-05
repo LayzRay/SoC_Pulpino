@@ -1,80 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1684874774" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/impl_1/pulpino_nexys_a7_routed.dcp">
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BITSTR-SYSDEF" Name="pulpino_nexys_a7.sysdef"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="pulpino_nexys_a7.ltx"/>
-  <File Type="BG-BGN" Name="pulpino_nexys_a7.bgn"/>
-  <File Type="RBD_FILE" Name="pulpino_nexys_a7.rbd"/>
-  <File Type="BG-DRC" Name="pulpino_nexys_a7.drc"/>
-  <File Type="NPI_FILE" Name="pulpino_nexys_a7.npi"/>
-  <File Type="RNPI_FILE" Name="pulpino_nexys_a7.rnpi"/>
-  <File Type="CFI_FILE" Name="pulpino_nexys_a7.cfi"/>
-  <File Type="PDI-FILE" Name="pulpino_nexys_a7.pdi"/>
-  <File Type="BITSTR-MMI" Name="pulpino_nexys_a7.mmi"/>
-  <File Type="BITSTR-BMM" Name="pulpino_nexys_a7_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="pulpino_nexys_a7.nky"/>
-  <File Type="BITSTR-RBT" Name="pulpino_nexys_a7.rbt"/>
-  <File Type="BITSTR-MSK" Name="pulpino_nexys_a7.msk"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1685705055" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/impl_1/pulpino_nexys_a7_routed.dcp">
+  <File Type="PA-TCL" Name="pulpino_nexys_a7.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="pulpino_nexys_a7_bus_skew_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="pulpino_nexys_a7_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="pulpino_nexys_a7_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="pulpino_nexys_a7_opt.dcp"/>
+  <File Type="OPT-DRC" Name="pulpino_nexys_a7_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="pulpino_nexys_a7.hwdef"/>
+  <File Type="PWROPT-DCP" Name="pulpino_nexys_a7_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="pulpino_nexys_a7_placed.dcp"/>
+  <File Type="PLACE-IO" Name="pulpino_nexys_a7_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="pulpino_nexys_a7_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="pulpino_nexys_a7_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="pulpino_nexys_a7_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="pulpino_nexys_a7_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="pulpino_nexys_a7_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="pulpino_nexys_a7_physopt.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="pulpino_nexys_a7_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="pulpino_nexys_a7_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="pulpino_nexys_a7_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="pulpino_nexys_a7_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="pulpino_nexys_a7_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="pulpino_nexys_a7_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="pulpino_nexys_a7_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="pulpino_nexys_a7_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="pulpino_nexys_a7_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="pulpino_nexys_a7_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="pulpino_nexys_a7_power_summary_routed.pb"/>
   <File Type="BG-BIN" Name="pulpino_nexys_a7.bin"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="pulpino_nexys_a7_timing_summary_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="pulpino_nexys_a7.msk"/>
+  <File Type="CFI_FILE" Name="pulpino_nexys_a7.cfi"/>
+  <File Type="ROUTE-TIMING-PB" Name="pulpino_nexys_a7_timing_summary_routed.pb"/>
+  <File Type="BITSTR-RBT" Name="pulpino_nexys_a7.rbt"/>
+  <File Type="RNPI_FILE" Name="pulpino_nexys_a7.rnpi"/>
+  <File Type="ROUTE-TIMING-RPX" Name="pulpino_nexys_a7_timing_summary_routed.rpx"/>
+  <File Type="BITSTR-NKY" Name="pulpino_nexys_a7.nky"/>
+  <File Type="ROUTE-SIMILARITY" Name="pulpino_nexys_a7_incremental_reuse_routed.rpt"/>
+  <File Type="BITSTR-BMM" Name="pulpino_nexys_a7_bd.bmm"/>
+  <File Type="ROUTE-CLK" Name="pulpino_nexys_a7_clock_utilization_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="pulpino_nexys_a7.mmi"/>
+  <File Type="ROUTE-BUS-SKEW" Name="pulpino_nexys_a7_bus_skew_routed.rpt"/>
+  <File Type="PDI-FILE" Name="pulpino_nexys_a7.pdi"/>
+  <File Type="RBD_FILE" Name="pulpino_nexys_a7.rbd"/>
+  <File Type="BG-BGN" Name="pulpino_nexys_a7.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="pulpino_nexys_a7.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BITSTR-LTX" Name="pulpino_nexys_a7.ltx"/>
+  <File Type="NPI_FILE" Name="pulpino_nexys_a7.npi"/>
+  <File Type="BG-DRC" Name="pulpino_nexys_a7.drc"/>
   <File Type="RCFI_FILE" Name="pulpino_nexys_a7.rcfi"/>
   <File Type="BG-BIT" Name="pulpino_nexys_a7.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="pulpino_nexys_a7_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="pulpino_nexys_a7_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="pulpino_nexys_a7_bus_skew_postroute_physopted.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="pulpino_nexys_a7_route_status.pb"/>
   <File Type="RDI-RDI" Name="pulpino_nexys_a7.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="pulpino_nexys_a7_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="pulpino_nexys_a7_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="pulpino_nexys_a7_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="pulpino_nexys_a7_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="pulpino_nexys_a7_postroute_physopt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW" Name="pulpino_nexys_a7_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="pulpino_nexys_a7_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="pulpino_nexys_a7_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="pulpino_nexys_a7_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="pulpino_nexys_a7_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="pulpino_nexys_a7_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="pulpino_nexys_a7_route_status.pb"/>
   <File Type="ROUTE-STATUS" Name="pulpino_nexys_a7_route_status.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="pulpino_nexys_a7_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="pulpino_nexys_a7_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="pulpino_nexys_a7_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="pulpino_nexys_a7_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="pulpino_nexys_a7_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="pulpino_nexys_a7_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="pulpino_nexys_a7_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="pulpino_nexys_a7_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="pulpino_nexys_a7_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="pulpino_nexys_a7_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="pulpino_nexys_a7_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="pulpino_nexys_a7_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="pulpino_nexys_a7_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="pulpino_nexys_a7_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="pulpino_nexys_a7_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="pulpino_nexys_a7_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="pulpino_nexys_a7_postplace_pwropt.dcp"/>
-  <File Type="PLACE-TIMING" Name="pulpino_nexys_a7_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="pulpino_nexys_a7_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="pulpino_nexys_a7_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="pulpino_nexys_a7_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="pulpino_nexys_a7_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="pulpino_nexys_a7_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="pulpino_nexys_a7_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="pulpino_nexys_a7_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="pulpino_nexys_a7_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="pulpino_nexys_a7_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="pulpino_nexys_a7_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="pulpino_nexys_a7_pwropt.dcp"/>
-  <File Type="OPT-TIMING" Name="pulpino_nexys_a7_timing_summary_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="pulpino_nexys_a7.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="pulpino_nexys_a7_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="pulpino_nexys_a7_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="pulpino_nexys_a7_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="pulpino_nexys_a7_timing_summary_init.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="pulpino_nexys_a7_bus_skew_routed.rpx"/>
-  <File Type="REPORTS-TCL" Name="pulpino_nexys_a7_reports.tcl"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="pulpino_nexys_a7_bus_skew_routed.pb"/>
-  <File Type="PA-TCL" Name="pulpino_nexys_a7.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../rtl/config.sv">
@@ -1223,6 +1205,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/Complex_Mult.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../rtl/includes/apu_defines.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -1317,6 +1307,26 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../sw/test_cipher_emb_text.dat">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../sw/test_cipher_emb_data.dat">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Fourier_Butterfly.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="pulpino_nexys_a7"/>
@@ -1339,7 +1349,7 @@
     <File Path="$PSRCDIR/utils_1/imports/impl_1/pulpino_nexys_a7_routed.dcp">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PRUNDIR/impl_1/pulpino_nexys_a7_routed.dcp"/>
-        <Attr Name="ImportTime" Val="1684852232"/>
+        <Attr Name="ImportTime" Val="1684921655"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedInSteps" Val="impl_1"/>
@@ -1349,7 +1359,7 @@
     <File Path="$PSRCDIR/utils_1/imports/synth_1/pulpino_nexys_a7.dcp">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PRUNDIR/synth_1/pulpino_nexys_a7.dcp"/>
-        <Attr Name="ImportTime" Val="1684874773"/>
+        <Attr Name="ImportTime" Val="1685704726"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedInSteps" Val="synth_1"/>
@@ -1371,6 +1381,7 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="xilinx_mmcm"/>
 </GenRun>

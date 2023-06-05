@@ -555,12 +555,7 @@ module peripherals
 ///                                                            ///
 //////////////////////////////////////////////////////////////////
 
-kuznechik_cipher_apb_wrapper
-#(
-  .APB_ADDR_WIDTH ( 12 ),  // APB slaves are 4KB by default
-  .APB_DATA_WIDTH ( 32 )
-)
-kuznechik_cipher_apb_wrapper_i
+kuznechik_cipher_apb_wrapper kuznechik_cipher_apb_wrapper_i
 (
   .clk_i         (  clk_int[8]                 ),
   .rstn_i        (  rst_n                      ),

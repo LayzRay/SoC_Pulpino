@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="xilinx_mmcm_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1680991955">
-  <File Type="RDS-UTIL" Name="xilinx_mmcm_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="xilinx_mmcm_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="xilinx_mmcm_utilization_synth.rpt"/>
   <File Type="RDS-RDS" Name="xilinx_mmcm.vds"/>
   <File Type="RDS-DCP" Name="xilinx_mmcm.dcp"/>
   <File Type="PA-TCL" Name="xilinx_mmcm.tcl"/>

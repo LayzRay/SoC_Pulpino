@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue May 23 20:51:40 2023
+| Date         : Fri Jun  2 11:25:25 2023
 | Host         : students-ct running 64-bit Ubuntu 22.04.2 LTS
 | Command      : report_incremental_reuse -file pulpino_nexys_a7_incremental_reuse_pre_placed.rpt
 | Design       : pulpino_nexys_a7
@@ -60,7 +60,7 @@ Table of Contents
 +-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
 |      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
 +-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
-| synth_design    |             |             |       00:04 |       00:04 |       00:04 |       00:03 |
+| synth_design    |             |             |       00:04 |       00:04 |       00:03 |       00:04 |
 | opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
 | read_checkpoint |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
 +-----------------+-------------+-------------+-------------+-------------+-------------+-------------+

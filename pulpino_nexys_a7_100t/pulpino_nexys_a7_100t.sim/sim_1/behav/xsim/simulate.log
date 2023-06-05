@@ -1,6 +1,5 @@
 Vivado Simulator 2019.2
 Time resolution is 1 ps
-WARNING: File test_cipher_emb_text.dat referenced on /home/student_28/Files/Lab_4/pulpino_students/rtl/xilinx_spram.v at line 33 cannot be opened for reading. Please ensure that this file is available in the current working directory.
-WARNING: File test_cipher_emb_data.dat referenced on /home/student_28/Files/Lab_4/pulpino_students/rtl/xilinx_spram.v at line 33 cannot be opened for reading. Please ensure that this file is available in the current working directory.
-            12595000: Illegal instruction (core 0) at PC 0x00000080:
-Instruction is valid, but has at least one X
+-805.000000, i140.000000
+
+$finish called at time : 100 ns : File "/home/student_28/Files/Pulpino/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.srcs/sim_1/new/Complex_Mult_tb.sv" Line 40

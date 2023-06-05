@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 8
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -57,6 +59,8 @@ read_mem {
   /home/student_28/Files/Pulpino/rtl/look_up_tables/L_muliplications/L_192.mem
   /home/student_28/Files/Pulpino/rtl/look_up_tables/L_muliplications/L_194.mem
   /home/student_28/Files/Pulpino/rtl/look_up_tables/L_muliplications/L_251.mem
+  /home/student_28/Files/Pulpino/sw/test_cipher_emb_text.dat
+  /home/student_28/Files/Pulpino/sw/test_cipher_emb_data.dat
 }
 read_verilog -library xil_defaultlib -sv {
   /home/student_28/Files/Pulpino/submodules/adv_dbg_if/rtl/adbg_axi_biu.sv
