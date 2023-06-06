@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib "/home/student_28/Files/Pulpino/rtl/config.sv" --include "../../../../../rtl" --include "../../../../../rtl/includes" --include "../../../../../submodules/apb/apb_event_unit/include" --include "../../../../../submodules/riscv/include" --include "../../../../../submodules/zero-riscy/include" --include "../../../../pulpino_nexys_a7_100t.srcs/sources_1/ip/xilinx_mmcm" \
+"../../../../pulpino_nexys_a7_100t.srcs/sim_1/new/wider_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

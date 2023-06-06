@@ -12,20 +12,23 @@ module Complex_Mult_tb();
       #(PERIOD/2);
     end
     
-    logic [ 31:0 ] ar_tb, ai_tb;
-    logic [ 31:0 ] br_tb, bi_tb;
+    logic [ 14:0 ] ar_tb, ai_tb;
+    logic [ 15:0 ] br_tb, bi_tb;
     logic [ 31:0 ] pr_tb, pi_tb;
     
     Complex_Mult
-    #( .AWIDTH(32), .BWIDTH(32) )
+    #( .AWIDTH(15), .BWIDTH(16) )
     CM
     ( .clk( CLK ),
       .ar( ar_tb ), .ai( ai_tb ),
       .br( br_tb ), .bi( bi_tb ),
-      
+        
       .pr( pr_tb ), .pi( pi_tb )
     
     );
+    
+    //localparam SF = 2.0 ** -16.0;
+    
     initial begin
     
         ar_tb = 0.47;
@@ -36,7 +39,7 @@ module Complex_Mult_tb();
         
        
         #100;
-        $display("%0f, i%0f\n", $signed( pr_tb ), $signed( pi_tb ) );
+        $display("%0f, %0f * i\n", $signed(pr_tb) , $signed( pi_tb ) );
         $finish;
     
     end
