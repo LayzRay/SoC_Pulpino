@@ -1,15 +1,14 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a027501552cb4364ad0da138265a52f0 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Complex_Mult_tb_behav xil_defaultlib.Complex_Mult_tb xil_defaultlib.glbl -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a027501552cb4364ad0da138265a52f0 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Fixed_point_num_tb_behav xil_defaultlib.Fixed_point_num_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3489] invalid expression in system call 'itor' [/home/student_28/Files/Pulpino/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.srcs/sim_1/new/Fixed_point_num_tb.sv:48]
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "/home/student_28/Files/Pulpino/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.srcs/sources_1/new/Complex_Mult.v" Line 5. Module Complex_Mult(AWIDTH=15,BWIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Complex_Mult(AWIDTH=15,BWIDTH=16...
-Compiling module xil_defaultlib.Complex_Mult_tb
+Compiling module xil_defaultlib.Fixed_point_num_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot Complex_Mult_tb_behav
+Built simulation snapshot Fixed_point_num_tb_behav

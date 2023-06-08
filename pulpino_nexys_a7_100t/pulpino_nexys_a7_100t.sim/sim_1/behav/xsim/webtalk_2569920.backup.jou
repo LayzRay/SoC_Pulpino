@@ -2,11 +2,11 @@
 # Webtalk v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Jun  6 01:15:06 2023
-# Process ID: 1686285
+# Start of session at: Tue Jun  6 18:05:37 2023
+# Process ID: 2569920
 # Current directory: /home/student_28/Files/Pulpino/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.sim/sim_1/behav/xsim
-# Command line: wbtcv -mode batch -source /home/student_28/Files/Pulpino/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.sim/sim_1/behav/xsim/xsim.dir/Complex_Mult_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv -mode batch -source /home/student_28/Files/Pulpino/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.sim/sim_1/behav/xsim/xsim.dir/Fixed_point_num_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/student_28/Files/Pulpino/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: /home/student_28/Files/Pulpino/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source /home/student_28/Files/Pulpino/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.sim/sim_1/behav/xsim/xsim.dir/Complex_Mult_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+source /home/student_28/Files/Pulpino/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.sim/sim_1/behav/xsim/xsim.dir/Fixed_point_num_tb_behav/webtalk/xsim_webtalk.tcl -notrace

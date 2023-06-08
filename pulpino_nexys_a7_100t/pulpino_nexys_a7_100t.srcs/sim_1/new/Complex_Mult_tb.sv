@@ -1,45 +1,33 @@
 `timescale 1ns / 1ps
 
 module Complex_Mult_tb();
+
+    parameter WIDTH_tb = 16;
     
-    logic CLK;
+    logic [ 1:0 ] [ WIDTH_tb - 1:0 ] x_tb, y_tb, z_tb;
     
-    parameter PERIOD = 10;
-    
-    always begin
-      CLK = 1'b0;
-      #(PERIOD/2) CLK = 1'b1;
-      #(PERIOD/2);
-    end
-    
-    logic [ 14:0 ] ar_tb, ai_tb;
-    logic [ 15:0 ] br_tb, bi_tb;
-    logic [ 31:0 ] pr_tb, pi_tb;
     
     Complex_Mult
-    #( .AWIDTH(15), .BWIDTH(16) )
+    #( .WIDTH( WIDTH_tb ) )
     CM
-    ( .clk( CLK ),
-      .ar( ar_tb ), .ai( ai_tb ),
-      .br( br_tb ), .bi( bi_tb ),
-        
-      .pr( pr_tb ), .pi( pi_tb )
+    ( 
+      .x( x_tb ), .y( y_tb ),
+      .z( z_tb )
     
     );
     
-    //localparam SF = 2.0 ** -16.0;
     
     initial begin
     
-        ar_tb = 0.47;
-        ai_tb = -35;
+        x_tb[0] = 16'h00_78; //0.47
+        y_tb[0] = 16'hFE_00; //-2.0
         
-        br_tb = -3.5;
-        bi_tb = -23;
+        x_tb[1] = 16'hFD_00; //-3.0
+        y_tb[1] = 16'h07_3A; //7.23
         
-       
-        #100;
-        $display("%0f, %0f * i\n", $signed(pr_tb) , $signed( pi_tb ) );
+        #10;
+        
+        $display("%0d.%0d, %0d.%0d * i\n", z_tb[ 0 ][ WIDTH_tb - 1 : WIDTH_tb / 2], z_tb[ 0 ][ WIDTH_tb / 2 - 1 : 0],  z_tb[ 1 ][ WIDTH_tb - 1 : WIDTH_tb / 2], z_tb[ 1 ][ WIDTH_tb / 2 - 1: 0] );
         $finish;
     
     end
