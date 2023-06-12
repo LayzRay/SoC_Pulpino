@@ -4,11 +4,5 @@ Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a027501552
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3489] invalid expression in system call 'itor' [/home/student_28/Files/Pulpino/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.srcs/sim_1/new/Fixed_point_num_tb.sv:48]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Fixed_point_num_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot Fixed_point_num_tb_behav
+ERROR: [VRFC 10-666] expression has 1 elements; expected 4 [/home/student_28/Files/Pulpino/pulpino_nexys_a7_100t/pulpino_nexys_a7_100t.srcs/sim_1/new/Fixed_point_num_tb.sv:10]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

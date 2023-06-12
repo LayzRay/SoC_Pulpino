@@ -7,6 +7,7 @@
 module Fixed_point_num_tb();
 
     parameter WIDTH_tb = 32;
+    
     localparam SF = 2.0 **-16.0;
     
     logic [ 1 : 0 ] [ `RE : `IM ] [ WIDTH_tb - 1 : 0 ] x_tb;
